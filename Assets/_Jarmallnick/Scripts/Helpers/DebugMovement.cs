@@ -9,7 +9,6 @@ namespace _Jarmallnick.Scripts.Helpers
         private void Update()
         {
             float horizontal = 0;
-            float vertical = 0;
 
             if (!playerState.isAttachedToLeftWall && Input.GetKey(KeyCode.A))
             {
@@ -21,17 +20,7 @@ namespace _Jarmallnick.Scripts.Helpers
                 horizontal += 1;
             }
 
-            if (Input.GetKey(KeyCode.S))
-            {
-                vertical -= 1;
-            }
-
-            if (Input.GetKey(KeyCode.W))
-            {
-                vertical += 1;
-            }
-
-            transform.position += new Vector3(horizontal, vertical, 0) * (speed * Time.deltaTime);
+            transform.position += new Vector3(horizontal, 0, 0) * (speed * Time.deltaTime);
         }
     }
 }

@@ -15,10 +15,9 @@ namespace _Jarmallnick.Scripts.Abilities
         [SerializeField] private LayerMask _wallLayer;
         [SerializeField] private WallSide wallSide;
         
-
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D col)
         {
-            if (HelperFunctions.IsLayerContains(_wallLayer, other.gameObject.layer))
+            if (HelperFunctions.IsLayerContains(_wallLayer, col.gameObject.layer))
             {
                 switch (wallSide)
                 {
@@ -32,9 +31,9 @@ namespace _Jarmallnick.Scripts.Abilities
             }
         }
         
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D col)
         {
-            if (HelperFunctions.IsLayerContains(_wallLayer, other.gameObject.layer))
+            if (HelperFunctions.IsLayerContains(_wallLayer, col.gameObject.layer))
             {
                 switch (wallSide)
                 {

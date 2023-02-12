@@ -46,7 +46,7 @@ namespace DLS.Core
 
         protected virtual void OnEnable()
         {
-            OnDialogueInteract += OnOnDialogueInteract;
+            OnDialogueInteract += DialogueInteract;
             DialogueUi.OnDialogueEnded += DialogueUiOnOnDialogueEnded;
         }
 
@@ -54,7 +54,7 @@ namespace DLS.Core
 
         protected virtual void OnDisable()
         {
-            OnDialogueInteract -= OnOnDialogueInteract;
+            OnDialogueInteract -= DialogueInteract;
             DialogueUi.OnDialogueEnded -= DialogueUiOnOnDialogueEnded;
 
         }
@@ -79,7 +79,7 @@ namespace DLS.Core
             targetGameObject = null;
         }
     
-        protected virtual void OnOnDialogueInteract(GameObject source, GameObject target)
+        protected virtual void DialogueInteract(GameObject source, GameObject target)
         {
             if (gameObject == target)
             {

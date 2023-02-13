@@ -20,10 +20,7 @@ namespace DLS.Core
 
         [SerializeField] 
         protected bool isInteracting;
-        
-        [SerializeField] 
-        protected bool isMovementDisabled;
-    
+
         [SerializeField]
         protected DialogueManager dialogueManager;
 
@@ -36,8 +33,6 @@ namespace DLS.Core
         
         public bool IsInteracting { get => isInteracting; set => isInteracting = value; }
         
-        public bool IsMovementDisabled { get => isMovementDisabled; set => isMovementDisabled = value; }
-
         public Sprite Portrait { get => portrait; set => portrait = value; }
 
         public string PortraitPath { get => portraitPath; set => portraitPath = value; }
@@ -46,7 +41,7 @@ namespace DLS.Core
 
         protected virtual void OnEnable()
         {
-            OnDialogueInteract += OnOnDialogueInteract;
+            OnDialogueInteract += DialogueInteract;
             DialogueUi.OnDialogueEnded += DialogueUiOnOnDialogueEnded;
         }
 
@@ -54,7 +49,7 @@ namespace DLS.Core
 
         protected virtual void OnDisable()
         {
-            OnDialogueInteract -= OnOnDialogueInteract;
+            OnDialogueInteract -= DialogueInteract;
             DialogueUi.OnDialogueEnded -= DialogueUiOnOnDialogueEnded;
 
         }
@@ -79,7 +74,7 @@ namespace DLS.Core
             targetGameObject = null;
         }
     
-        protected virtual void OnOnDialogueInteract(GameObject source, GameObject target)
+        protected virtual void DialogueInteract(GameObject source, GameObject target)
         {
             if (gameObject == target)
             {
@@ -89,7 +84,6 @@ namespace DLS.Core
                     {
                         dialogueManager.StartDialogue();
                         isInteracting = true;
-                        isMovementDisabled = true;
                         DialogueUi.Instance.HideInteractionText();
                     }
                 }
@@ -99,7 +93,6 @@ namespace DLS.Core
         protected virtual void DialogueUiOnOnDialogueEnded()
         {
             isInteracting = false;
-            isMovementDisabled = false;
         }
     }
 }

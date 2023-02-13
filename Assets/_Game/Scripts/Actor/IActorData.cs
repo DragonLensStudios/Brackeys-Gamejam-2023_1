@@ -22,9 +22,7 @@ namespace DLS.Core
         GameObject TargetGameObject { get; set; }
         
         bool IsInteracting { get; set; }
-        
-        bool IsMovementDisabled { get; set; }
-        
+
         /// <summary>
         /// The name of the Actor.
         /// </summary>

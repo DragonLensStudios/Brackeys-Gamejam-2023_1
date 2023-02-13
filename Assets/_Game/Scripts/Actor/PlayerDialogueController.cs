@@ -37,7 +37,6 @@ namespace DLS.Core
             if (gameObject == source)
             {
                 isInteracting = true;
-                isMovementDisabled = true;
             }
         }
     }

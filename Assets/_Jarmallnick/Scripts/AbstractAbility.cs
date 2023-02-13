@@ -3,7 +3,7 @@
 namespace _Jarmallnick.Scripts
 {
     [RequireComponent(typeof(PlayerState))]
-    public abstract class AbstractAbility : MonoBehaviour, IAbility
+    public abstract class AbstractAbility : MonoBehaviour
     {
         protected PlayerState playerState;
         

@@ -25,7 +25,7 @@ namespace _Jarmallnick.Scripts.Abilities
 
         private void Jump()
         {
-            if (!playerState.isStandingOnFloor)
+            if (!playerState.isGrounded)
                 return;
 
             if (Time.time - _lastJumpTime < JumpCooldown)
@@ -41,7 +41,7 @@ namespace _Jarmallnick.Scripts.Abilities
         {
             if (HelperFunctions.IsLayerContains(floorLayer, col.gameObject.layer))
             {
-                playerState.isStandingOnFloor = true;
+                playerState.isGrounded = true;
             }
         }
 
@@ -49,7 +49,7 @@ namespace _Jarmallnick.Scripts.Abilities
         {
             if (HelperFunctions.IsLayerContains(floorLayer, other.gameObject.layer))
             {
-                playerState.isStandingOnFloor = false;
+                playerState.isGrounded = false;
             }
         }
     }

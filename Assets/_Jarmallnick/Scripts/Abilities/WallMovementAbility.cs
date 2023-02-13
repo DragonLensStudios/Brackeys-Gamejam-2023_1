@@ -44,12 +44,12 @@ namespace _Jarmallnick.Scripts.Abilities
 
         private void Cling()
         {
-            if (playerState.IsAttachedToWall && !playerState.isStandingOnFloor)
+            if (playerState.IsAttachedToWall && !playerState.isGrounded)
             {
                 _rb.drag = ClingDrag;
             }
             
-            if (!playerState.IsAttachedToWall || playerState.isStandingOnFloor)
+            if (!playerState.IsAttachedToWall || playerState.isGrounded)
             {
                 _rb.drag = DefaultDrag;
             }

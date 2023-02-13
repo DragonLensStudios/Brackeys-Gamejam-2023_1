@@ -7,18 +7,19 @@ namespace DLS.Core
     {
         [SerializeField] protected int jumpsAllowed = 2;
         [SerializeField] protected float jumpForce = 8f;
-        [SerializeField] protected bool isGrounded = true;
         [SerializeField] protected LayerMask whatIsGround;
         [SerializeField] protected float checkRadius = 0.6f;
         
         protected Rigidbody2D rb;
         protected PlayerInputActions playerInput;
+        protected PlayerState playerState;
         protected int currentJumps = 1;
 
         protected void Awake()
         {
             playerInput = new PlayerInputActions();
             rb = GetComponent<Rigidbody2D>();
+            playerState = GetComponent<PlayerState>();
         }
         
         protected virtual void OnEnable()
@@ -35,7 +36,7 @@ namespace DLS.Core
         
         private void JumpOnperformed(InputAction.CallbackContext input)
         {
-            if (isGrounded || currentJumps < jumpsAllowed)
+            if (playerState.isGrounded || currentJumps < jumpsAllowed)
             {
                 currentJumps++;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -43,8 +44,8 @@ namespace DLS.Core
         }
         protected void FixedUpdate()
         {
-            isGrounded = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsGround);
-            if (isGrounded)
+            playerState.isGrounded = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsGround);
+            if (playerState.isGrounded)
             {
                 currentJumps = 1;
             }

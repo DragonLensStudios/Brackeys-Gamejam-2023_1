@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 
-namespace _Jarmallnick.Scripts
+public class PlayerState : MonoBehaviour
 {
-    public class PlayerState : MonoBehaviour
-    {
-        public bool isAttachedToLeftWall;
-        public bool isAttachedToRightWall;
-        public bool isStandingOnFloor;
-        public bool isInAir;
+    public bool isAttachedToLeftWall;
+    public bool isAttachedToRightWall;
+    public bool isGrounded;
+    public bool isInAir;
 
-        public bool IsAttachedToWall => isAttachedToLeftWall || isAttachedToRightWall;
-    }
+    public bool IsAttachedToWall => isAttachedToLeftWall || isAttachedToRightWall;
 }

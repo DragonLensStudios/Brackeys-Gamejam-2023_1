@@ -1,53 +1,49 @@
 using System.Collections;
 using UnityEngine;
 
-public class FallingPlatform : MonoBehaviour
+namespace _Game.Scripts.Platforms
 {
-    [SerializeField] private float delayAnimationMaxRange = 3f;
-    [SerializeField] private float breakDelay;
-
-    private bool _isBreaking;
-    private Animator _animator;
-    private Collider2D _collider;
-
-    private void Awake()
+    public class FallingPlatform : BasePlatform
     {
-        _animator = GetComponent<Animator>();
-        _collider = GetComponent<Collider2D>();
-    }
-
-    void Start()
-    {
-        StartCoroutine(StartIdleAnimation(delayAnimationMaxRange));
-    }
-    
-    private IEnumerator StartIdleAnimation(float maxDuration)
-    {
-        yield return new WaitForSeconds(Random.Range(0, maxDuration));
-        _animator.SetTrigger("Activate");
-    }
-
-    private IEnumerator StartFalling()
-    {
-        _isBreaking = true;
-        _animator.SetTrigger("Shake");
-        yield return new WaitForSeconds(breakDelay);
-        _animator.SetTrigger("Activate");
-        _collider.enabled = false;
-        _animator.SetTrigger("Break");
-    }
-
-    // called in break animation on event trigger
-    private void Break()
-    {
-        Destroy(gameObject);
-    }
-    
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.collider.CompareTag("Player") && !_isBreaking)
+        [SerializeField] private Vector2 fallPosition;
+        [SerializeField] private float speed = 1f;
+        
+        private void OnCollisionEnter2D(Collision2D col)
         {
-            StartCoroutine(StartFalling());
+            if (col.collider.CompareTag("Player"))
+            {
+            }
+        }
+
+        private IEnumerator StartFalling()
+        {
+            Vector2 currentPosition = transform.position;
+            var step = speed * Time.deltaTime;
+            while ((Vector2)transform.position != fallPosition)
+            {
+                var newPosition = Vector2.MoveTowards(transform.position, fallPosition, step);
+                transform.position = newPosition;
+                yield return null;
+            }
+            
+            _animator.SetTrigger("Fall");
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.CompareTag("Player"))
+            {
+                StartCoroutine(StartFalling());
+                col.transform.parent = transform;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D col)
+        {
+            if (col.CompareTag("Player"))
+            {
+                col.transform.parent = null;
+            }
         }
     }
 }

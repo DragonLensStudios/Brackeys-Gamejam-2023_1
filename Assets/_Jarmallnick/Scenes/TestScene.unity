@@ -3467,7 +3467,7 @@ GameObject:
   - component: {fileID: 3569405522093200351}
   - component: {fileID: 3569405522093200352}
   m_Layer: 6
-  m_Name: Death Platform
+  m_Name: Spiked Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3506,9 +3506,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayAnimationMaxRange: 3
-  normalSideTime: 4
-  spikedSideTime: 4
+  normalSideTime: 3
+  spikedSideTime: 3
   turnTime: 0.2
+  shakeTime: 1
 --- !u!114 &5255363840800295288
 MonoBehaviour:
   m_ObjectHideFlags: 0

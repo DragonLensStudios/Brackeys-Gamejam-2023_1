@@ -9,6 +9,7 @@ public class SpikedPlatform : MonoBehaviour
     [SerializeField] private float normalSideTime;
     [SerializeField] private float spikedSideTime;
     [SerializeField] private float turnTime;
+    [SerializeField] private float shakeTime;
 
     private Animator _animator;
     private bool _isSpikesUp;
@@ -19,14 +20,14 @@ public class SpikedPlatform : MonoBehaviour
     {
         if (_isSpikesUp)
         {
-            if (Time.time - _lastTurnTime > spikedSideTime)
+            if (Time.time - _lastTurnTime > spikedSideTime - shakeTime)
             {
                 StartCoroutine(TurnOver());
             }
         }
         else
         {
-            if (Time.time - _lastTurnTime > normalSideTime)
+            if (Time.time - _lastTurnTime > normalSideTime - shakeTime)
             {
                 StartCoroutine(TurnOver());
             }
@@ -35,15 +36,19 @@ public class SpikedPlatform : MonoBehaviour
 
     private IEnumerator TurnOver()
     {
-        _lastTurnTime = Time.time;
-        var turnStartTime = Time.time;
+        _lastTurnTime = Time.time + shakeTime + turnTime;
+        
+        _animator.SetTrigger("Shake");
+        yield return new WaitForSeconds(shakeTime);
+        _animator.SetTrigger("Activate");
 
-        var newAngle = Quaternion.Euler(0, 0, (transform.rotation.eulerAngles.z + 180) % 360);
+        var newAngle = (transform.rotation.eulerAngles.z + 180) % 360;
+        var newRotation = Quaternion.Euler(0, 0, newAngle);
         var step = 180 / turnTime * Time.fixedDeltaTime;
 
-        while (Time.time - turnStartTime <= turnTime)
+        while (Mathf.Abs(transform.rotation.eulerAngles.z - newAngle) > 0.01f)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, newAngle, step);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, step);
             yield return _turnFractionTime;
         }
 

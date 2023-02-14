@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 7714236586088328870}
   - component: {fileID: 7714236586088328871}
   - component: {fileID: 7714236586088328869}
-  - component: {fileID: 7714236586088328875}
   - component: {fileID: 7714236586088328872}
   - component: {fileID: -3968008194765313915}
-  - component: {fileID: 4095393215687331107}
+  - component: {fileID: 5889381010878634200}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,24 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7714236586088328875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714236586088328866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bfbec78a63a4060b3a498efa3af5546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpsAllowed: 2
-  jumpForce: 8
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  checkRadius: 0.6
 --- !u!114 &7714236586088328872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +141,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   movement: {x: 0, y: 0}
+  jumpsAllowed: 2
+  jumpForce: 8
+  jumpHorizontalForce: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  checkRadius: 0.6
 --- !u!114 &-3968008194765313915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,19 +161,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastRespawnPosition: {x: 0, y: 0}
---- !u!58 &4095393215687331107
-CircleCollider2D:
+--- !u!114 &5889381010878634200
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7714236586088328866}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36193639bb0b4858b1fab73dd1eb697d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttachedToLeftWall: 0
+  isAttachedToRightWall: 0
+  isGrounded: 0
+  isInAir: 0

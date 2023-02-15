@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ba9fb7ebd78ec45b2d4bf83b73a4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayAnimationMaxRange: 3
   waypoints:
-  - {x: 4, y: 2}
-  - {x: -4, y: 2}
+  - {x: -8, y: 0}
+  - {x: -8, y: 2}
+  - {x: -8, y: 4}
   speed: 2
   delay: 0
   loopInReverse: 0

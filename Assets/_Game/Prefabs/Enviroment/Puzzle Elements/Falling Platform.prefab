@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2842071491812399552}
+  - component: {fileID: 3899489973309680961}
   - component: {fileID: 2842071491812399553}
   - component: {fileID: 2842071491812399554}
   - component: {fileID: 2842071491812399567}
-  - component: {fileID: 3899489973309680961}
   - component: {fileID: 3899489973309680960}
   m_Layer: 6
   m_Name: Falling Platform
@@ -36,6 +36,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3899489973309680961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842071491812399555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e838bde67d48444eadc605b08d1e72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayAnimationMaxRange: 3
+  fallPosition: {x: 3, y: -0.5}
+  speed: 0.5
 --- !u!212 &2842071491812399553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,21 +149,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &3899489973309680961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2842071491812399555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e838bde67d48444eadc605b08d1e72f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayAnimationMaxRange: 3
-  fallPosition: {x: 3, y: -0.5}
-  speed: 0.5
 --- !u!61 &3899489973309680960
 BoxCollider2D:
   m_ObjectHideFlags: 0

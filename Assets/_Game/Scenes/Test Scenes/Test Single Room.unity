@@ -2246,27 +2246,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4623395265025771660, guid: 8cec981d4ea0f8940aa102fe464e3abb, type: 3}
   m_PrefabInstance: {fileID: 1434375408}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1567926156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7714236586088328866, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
-  m_PrefabInstance: {fileID: 7714236585903628897}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1567926164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567926156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36193639bb0b4858b1fab73dd1eb697d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttachedToLeftWall: 0
-  isAttachedToRightWall: 0
-  isGrounded: 0
-  isInAir: 0
 --- !u!1 &1601711082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +2862,14 @@ PrefabInstance:
     - target: {fileID: 7714236586088328866, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714236586088328869, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
+      propertyPath: m_Mass
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714236586088328869, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7714236586088328873, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
       propertyPath: m_RootOrder

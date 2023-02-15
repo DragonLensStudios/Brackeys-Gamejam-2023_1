@@ -9,7 +9,8 @@ namespace DLS.Core
         [SerializeField] protected float moveSpeed = 3f;
         [SerializeField] protected Vector2 movement;
         [SerializeField] protected int jumpsAllowed = 2;
-        [SerializeField] protected float jumpForce = 8f;
+        [SerializeField] protected float jumpForce = 7f;
+        [SerializeField] protected float multiJumpForce = 4.5f;
         [SerializeField] private float jumpHorizontalForce = 2f;
         [SerializeField] protected LayerMask whatIsGround;
         [SerializeField] protected float checkRadius = 0.6f;
@@ -57,9 +58,14 @@ namespace DLS.Core
         }
         private void JumpOnperformed(InputAction.CallbackContext input)
         {
-            if (playerState.isGrounded || currentJumps < jumpsAllowed)
+            if (playerState.isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                currentJumps++;
+            }
+            else if (currentJumps < jumpsAllowed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, multiJumpForce);
                 currentJumps++;
             }
             else if (playerState.IsAttachedToWall)

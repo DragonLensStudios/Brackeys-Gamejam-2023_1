@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aaa6231e6d6845f48bc4af26b79ccdfc
+guid: 26279d1d12417cd448d08277cc93c8c0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,7 +141,343 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Move_Platform_Fall_0
+      name: Spike_Platform_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c305d83789f595c4793c5a1f81b4cd65
+      internalID: -1688104337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c276eba698d79e84883e408001807828
+      internalID: 1485897077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c3842b8ef5d884b8958aeb9c6ddfe6
+      internalID: -1184453948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a005f3d7ba8543408396fbe1dc12f6e
+      internalID: -514744378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88b4e3959487fd43a3db262a799a6dc
+      internalID: 227687459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d865680beed49e46ad3a80ae5c45e56
+      internalID: -1030711909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a23c1a6c11b3947a72ab5485c788b8
+      internalID: -1493067953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e27bd6ec511f8c41a69a175cf565115
+      internalID: -1968267885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34af3c3f3b829641a26e9c5eb561051
+      internalID: 1180236711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b32f5a6e4c6da2478e5c86a127c1cb4
+      internalID: 1399968768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cebc445eacf78439ee194eed8c3fee
+      internalID: -1273587667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fd67cff24cff840b23c092f9a6e333
+      internalID: 1018092300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a611291f597aaf840a73a2e3b2ccc7a2
+      internalID: 995809028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fac194a9801b3e41916a2662d9e5ffd
+      internalID: 1082250550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c6eac56266ea040842dc599183ceae
+      internalID: 135495817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23b5c84a437592478d287e1ea089f9b
+      internalID: 1151240640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_Platform_16
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +491,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad81023f77c795d4196fcb2f3c821b89
-      internalID: -2079953229
+      spriteID: 4f480a99437841b49b05bf74be15dd27
+      internalID: -1731329282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_1
+      name: Spike_Platform_17
       rect:
         serializedVersion: 2
         x: 32
@@ -176,14 +512,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5909c9da764dce46bcea27664902f3b
-      internalID: -2035338751
+      spriteID: 0703d9abec25cc1478893da72b9e2af2
+      internalID: 845892447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_2
+      name: Spike_Platform_18
       rect:
         serializedVersion: 2
         x: 64
@@ -197,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a27c69dbfdc2804eb62ede08c6b12c6
-      internalID: 1410228849
+      spriteID: 323d0db3b10c240489970ba08036572f
+      internalID: 119686572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_3
+      name: Spike_Platform_19
       rect:
         serializedVersion: 2
         x: 96
@@ -218,14 +554,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95be95e9c5d570e4d91576c0d122e578
-      internalID: 946048165
+      spriteID: a554c78b9d124d84abf5de211e10ea5f
+      internalID: -378801136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_4
+      name: Spike_Platform_20
       rect:
         serializedVersion: 2
         x: 128
@@ -239,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86cc95271029d6046bf3ae9f2f7ef813
-      internalID: 1907105237
+      spriteID: b450ac09d981b0d4fa48a70409d31aaa
+      internalID: -624085935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_5
+      name: Spike_Platform_21
       rect:
         serializedVersion: 2
         x: 160
@@ -260,14 +596,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d23b3836201564b8ef782c06e8a0e5
-      internalID: -1666350650
+      spriteID: c4176292166390a4ebedff62213a4282
+      internalID: 1002798825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_6
+      name: Spike_Platform_22
       rect:
         serializedVersion: 2
         x: 192
@@ -281,14 +617,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2ac9b8c96223342b153459488e7bcc
-      internalID: -1730831131
+      spriteID: 5581cce5699e2154e9089d230533752d
+      internalID: 719205649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_Platform_Fall_7
+      name: Spike_Platform_23
       rect:
         serializedVersion: 2
         x: 224
@@ -302,134 +638,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e08f91734be35a449418941b8f56cf5
-      internalID: 265847177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c2e60641ad20e84ba1bab3170ead691
-      internalID: -1585371851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8834b1434f172449a57bdbb05c6d5ae
-      internalID: 1265757345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_10
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c1013c46fd900645a922b5b9ae92f88
-      internalID: 1797061107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_11
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cb7213fd024cff45ae5e9692b56cdef
-      internalID: -1003475260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_12
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b767652050cd2c14bb34fb73368b6cb5
-      internalID: -1731615018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_Platform_Fall_13
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0816cb9540320174ca8b59f6128afaa5
-      internalID: 1488408857
+      spriteID: 42cc6c36f660eab4aa578d3faf52374b
+      internalID: -542000341
       vertices: []
       indices: 
       edges: []
@@ -445,20 +655,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Move_Platform_Fall_7: 265847177
-      Move_Platform_Fall_1: -2035338751
-      Move_Platform_Fall_5: -1666350650
-      Move_Platform_Fall_8: -1585371851
-      Move_Platform_Fall_2: 1410228849
-      Move_Platform_Fall_4: 1907105237
-      Move_Platform_Fall_11: -1003475260
-      Move_Platform_Fall_10: 1797061107
-      Move_Platform_Fall_3: 946048165
-      Move_Platform_Fall_13: 1488408857
-      Move_Platform_Fall_6: -1730831131
-      Move_Platform_Fall_9: 1265757345
-      Move_Platform_Fall_12: -1731615018
-      Move_Platform_Fall_0: -2079953229
+      Spike_Platform_3: -514744378
+      Spike_Platform_1: 1485897077
+      Spike_Platform_7: -1968267885
+      Spike_Platform_9: 1399968768
+      Spike_Platform_22: 719205649
+      Spike_Platform_17: 845892447
+      Spike_Platform_18: 119686572
+      Spike_Platform_10: -1273587667
+      Spike_Platform_14: 135495817
+      Spike_Platform_20: -624085935
+      Spike_Platform_5: -1030711909
+      Spike_Platform_11: 1018092300
+      Spike_Platform_2: -1184453948
+      Spike_Platform_6: -1493067953
+      Spike_Platform_12: 995809028
+      Spike_Platform_8: 1180236711
+      Spike_Platform_13: 1082250550
+      Spike_Platform_23: -542000341
+      Spike_Platform_4: 227687459
+      Spike_Platform_21: 1002798825
+      Spike_Platform_0: -1688104337
+      Spike_Platform_15: 1151240640
+      Spike_Platform_19: -378801136
+      Spike_Platform_16: -1731329282
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

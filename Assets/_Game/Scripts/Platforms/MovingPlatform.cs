@@ -8,10 +8,24 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private float speed = 1f;
         [SerializeField] private float delay;
         [SerializeField] private bool loopInReverse;
+        [SerializeField] private bool isLocked;
 
         private int _currentWaypointIndex;
         private bool _movingForward = true;
         private float _timeSinceReachedWaypoint;
+
+        protected override void SetupPlatform()
+        {
+            base.SetupPlatform();
+            _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+        }
+
+        [ContextMenu("ToggleLock")]
+        public void ToggleLock()
+        {
+            isLocked = !isLocked;
+            _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+        }
 
         private void Move()
         {
@@ -57,6 +71,9 @@ namespace _Game.Scripts.Platforms
 
         private void Update()
         {
+            if (isLocked)
+                return;
+            
             Move();
         }
 

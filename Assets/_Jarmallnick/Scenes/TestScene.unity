@@ -3387,20 +3387,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   movement: {x: 0, y: 0}
---- !u!114 &7714236587351265110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714236587351265119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bfbec78a63a4060b3a498efa3af5546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpsAllowed: 1
+  jumpsAllowed: 2
   jumpForce: 8
+  jumpHorizontalForce: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -3534,11 +3523,9 @@ GameObject:
   - component: {fileID: 7714236587351265114}
   - component: {fileID: 7714236587351265113}
   - component: {fileID: 7714236587351265112}
-  - component: {fileID: 7714236587351265110}
   - component: {fileID: 7714236587351265109}
   - component: {fileID: 5255363840800295288}
   - component: {fileID: 7714236587351265120}
-  - component: {fileID: 7714236587351265121}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player

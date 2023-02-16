@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -9,10 +10,39 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private float delay;
         [SerializeField] private bool loopInReverse;
         [SerializeField] private bool isLocked;
+        [SerializeField] private string switchNameToUnlock;
 
         private int _currentWaypointIndex;
         private bool _movingForward = true;
         private float _timeSinceReachedWaypoint;
+
+        private void OnEnable()
+        {
+            SwitchController.OnSwitchActivated += OnSwitchActivated;
+            SwitchController.OnSwitchDeactivated += OnSwitchDeactivated;
+        }
+
+        private void OnDisable()
+        {
+            SwitchController.OnSwitchActivated -= OnSwitchActivated;
+            SwitchController.OnSwitchDeactivated -= OnSwitchDeactivated;
+
+        }
+        private void OnSwitchActivated(SwitchController switchController)
+        {
+            if (switchController.switchName.Equals(switchNameToUnlock))
+            {
+                isLocked = false;
+            }
+        }
+        
+        private void OnSwitchDeactivated(SwitchController switchController)
+        {
+            if (switchController.switchName.Equals(switchNameToUnlock))
+            {
+                isLocked = true;
+            }        
+        }
 
         protected override void SetupPlatform()
         {

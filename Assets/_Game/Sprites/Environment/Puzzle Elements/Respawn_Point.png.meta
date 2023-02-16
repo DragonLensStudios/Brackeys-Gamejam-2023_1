@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 36d12cd82e5aedc4d8110f0364308cd3
+guid: c9a76cbd6e4715d41abea26e6ec0ca7e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,91 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rock_Tile_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc1e95cc141d7f244921eda2172b5639
-      internalID: 1344567837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5053cb29ae8f05d46bec531989be7727
-      internalID: 1400531293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 375b89d3e03e4634ebab4e308ef403de
-      internalID: 734944791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f084a3489114534ea456d339af08dc4
-      internalID: 935543062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_4
+      name: Respawn_Point_0
       rect:
         serializedVersion: 2
         x: 0
@@ -233,83 +149,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d6ab799fe1effa4b8f42d1381608efd
-      internalID: -1490969003
+      spriteID: 34d27e350c4bb5e40a3b15c3d7142fb3
+      internalID: 886995938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb770cbb4527f2248b3859d51f607eab
-      internalID: -2042065231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 386bbac4dbfd2ac49adbed29030fa11b
-      internalID: -806679665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de6f943f61953ce4e85e950f1b67f8ce
-      internalID: 1810360648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rock_Tile_8
+      name: Respawn_Point_1
       rect:
         serializedVersion: 2
         x: 0
@@ -317,20 +170,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afe1d4ad02c45464a9c9e8507abd79ce
-      internalID: -1944273769
+      spriteID: f7b1b17271114ab4a851a6f411523170
+      internalID: -898322025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_9
+      name: Respawn_Point_2
       rect:
         serializedVersion: 2
         x: 32
@@ -338,20 +191,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743a67e33fc8768458bc54087b8a9bab
-      internalID: -1665172770
+      spriteID: 62b2ce5c8feb84a43a96c08e3286935c
+      internalID: 1076384058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_10
+      name: Respawn_Point_3
       rect:
         serializedVersion: 2
         x: 64
@@ -359,20 +212,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9c1ede62d2b6b4458f96e84d8e189c6
-      internalID: 1265104458
+      spriteID: 4d21f346f838de1489d32c4303f38db8
+      internalID: 1690998363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_11
+      name: Respawn_Point_4
       rect:
         serializedVersion: 2
         x: 96
@@ -380,20 +233,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60cadb0c134132e47b16a23ccb568e56
-      internalID: 146050248
+      spriteID: 7ad53e5578cd49a4c97f00550307e758
+      internalID: 1414770336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_12
+      name: Respawn_Point_5
       rect:
         serializedVersion: 2
         x: 0
@@ -401,20 +254,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0991b6715873e4246a77427259f80217
-      internalID: 1205514910
+      spriteID: cff1f880ec1d69e4d9d956a230cc8caf
+      internalID: 1094206296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_13
+      name: Respawn_Point_6
       rect:
         serializedVersion: 2
         x: 32
@@ -422,20 +275,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f834c29f87cac4da5d65999aedd0a9
-      internalID: 871901220
+      spriteID: 32cd4ee75ab90cc439d84d6f36b6553b
+      internalID: 1344697398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_14
+      name: Respawn_Point_7
       rect:
         serializedVersion: 2
         x: 64
@@ -443,20 +296,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cdbab4c5234891439431f4ecfafd248
-      internalID: 59695309
+      spriteID: 1f6c02e4357742f43892481662a4fe28
+      internalID: 1703278903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_Tile_15
+      name: Respawn_Point_8
       rect:
         serializedVersion: 2
         x: 96
@@ -464,14 +317,182 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a570a04270a0547826343245a670c4
-      internalID: -1652917008
+      spriteID: 570530a6a62420b44b2a1fbdbe8df6ea
+      internalID: -1794028796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c37aba6f9331c47991fa72222fb473
+      internalID: -1206240301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b6d0d0dcc78ef4bb91b4a8dca22bb3
+      internalID: 896076762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375f397f078f7a444af1d6ec196c9335
+      internalID: 2001668930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf6a38716d1337489182804296bc200
+      internalID: 474100232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5199ce3948ce39d49a12567a770e325a
+      internalID: -1564632401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0417fb2499314bf4580bd53ccc5b631a
+      internalID: 1563254476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bebbc6a02d979c4384bcc859eb520d2
+      internalID: 1747899183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Respawn_Point_16
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a7fffcdcc585b4a971a1446d221556
+      internalID: -1345381314
       vertices: []
       indices: 
       edges: []
@@ -487,22 +508,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rock_Tile_9: -1665172770
-      Rock_Tile_8: -1944273769
-      Rock_Tile_15: -1652917008
-      Rock_Tile_12: 1205514910
-      Rock_Tile_7: 1810360648
-      Rock_Tile_5: -2042065231
-      Rock_Tile_11: 146050248
-      Rock_Tile_13: 871901220
-      Rock_Tile_4: -1490969003
-      Rock_Tile_1: 1400531293
-      Rock_Tile_2: 734944791
-      Rock_Tile_10: 1265104458
-      Rock_Tile_3: 935543062
-      Rock_Tile_6: -806679665
-      Rock_Tile_0: 1344567837
-      Rock_Tile_14: 59695309
+      Respawn_Point_0: 886995938
+      Respawn_Point_4: 1414770336
+      Respawn_Point_6: 1344697398
+      Respawn_Point_11: 2001668930
+      Respawn_Point_3: 1690998363
+      Respawn_Point_7: 1703278903
+      Respawn_Point_13: -1564632401
+      Respawn_Point_5: 1094206296
+      Respawn_Point_12: 474100232
+      Respawn_Point_8: -1794028796
+      Respawn_Point_15: 1747899183
+      Respawn_Point_1: -898322025
+      Respawn_Point_16: -1345381314
+      Respawn_Point_2: 1076384058
+      Respawn_Point_14: 1563254476
+      Respawn_Point_9: -1206240301
+      Respawn_Point_10: 896076762
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

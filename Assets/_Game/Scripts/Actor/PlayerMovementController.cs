@@ -14,6 +14,7 @@ namespace DLS.Core
         [SerializeField] private float jumpHorizontalForce = 2f;
         [SerializeField] protected LayerMask whatIsGround;
         [SerializeField] protected float checkRadius = 0.6f;
+        [SerializeField] protected bool wallJumpEnabled = false;
         protected Rigidbody2D rb;
         protected PlayerInputActions playerInput;
         protected PlayerState playerState;
@@ -68,7 +69,7 @@ namespace DLS.Core
                 rb.velocity = new Vector2(rb.velocity.x, multiJumpForce);
                 currentJumps++;
             }
-            else if (playerState.IsAttachedToWall)
+            else if (playerState.IsAttachedToWall && wallJumpEnabled)
             {
                 var jumpDirection = playerState.isAttachedToLeftWall ? 1f : -1f;
                 rb.velocity = new Vector2(rb.velocity.x + jumpDirection * jumpHorizontalForce, jumpForce);
@@ -82,7 +83,11 @@ namespace DLS.Core
             {
                 currentJumps = 1;
             }
-            Cling();
+
+            if (wallJumpEnabled)
+            {
+                Cling();
+            }
         }
         
         private void Cling()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Geyser : MonoBehaviour
 {
-    [SerializeField] private Transform geyserColumn;
     [SerializeField] private float geyserHeight;
     [SerializeField] private float upPositionTime;
     [SerializeField] private float downPositionTime;
@@ -35,13 +34,13 @@ public class Geyser : MonoBehaviour
     {
         _lastEruptionTime = Time.time + eruptionTime;
 
-        Vector2 oldPosition = geyserColumn.localPosition;
-        var newPosition = _isRisen ? Vector2.zero : Vector2.up * geyserHeight;
+        Vector2 oldPosition = transform.position;
+        var newPosition = oldPosition + Vector2.up * ((_isRisen ? -1 : 1) * geyserHeight);
         var step = Vector2.Distance(newPosition, oldPosition) / eruptionTime * Time.deltaTime;
         
-        while ((Vector2)geyserColumn.localPosition != newPosition)
+        while ((Vector2)transform.position != newPosition)
         {
-            geyserColumn.localPosition = Vector2.MoveTowards(geyserColumn.localPosition, newPosition, step);
+            transform.position = Vector2.MoveTowards(transform.position, newPosition, step);
             yield return null;
         }
 

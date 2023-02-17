@@ -14,6 +14,7 @@ public class SwitchController : MonoBehaviour
     public bool isActivated = false;
     private Animator anim;
     private PlayerInputActions playerInput;
+    private bool isInTriggerZone = false;
 
     private void Awake()
     {
@@ -35,13 +36,32 @@ public class SwitchController : MonoBehaviour
 
     private void OnPlayerInteract(InputAction.CallbackContext input)
     {
-        if (!isActivated)
+        if (isInTriggerZone)
         {
-            Activate();
+            if (!isActivated)
+            {
+                Activate();
+            }
+            else
+            {
+                Deactivate();
+            }    
         }
-        else
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
         {
-            Deactivate();
+            isInTriggerZone = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            isInTriggerZone = false;
         }
     }
 

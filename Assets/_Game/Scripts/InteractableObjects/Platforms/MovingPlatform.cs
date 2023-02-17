@@ -32,7 +32,7 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = false;
+                isLocked = !isLocked;
             }
         }
         
@@ -40,7 +40,7 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = true;
+                isLocked = !isLocked;
             }        
         }
 

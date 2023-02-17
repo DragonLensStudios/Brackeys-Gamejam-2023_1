@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -166,7 +166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -187,7 +187,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -208,7 +208,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -229,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -250,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -271,7 +271,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -292,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -312,8 +312,8 @@ TextureImporter:
       name: Move_Platform_Fall_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -333,8 +333,8 @@ TextureImporter:
       name: Move_Platform_Fall_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -354,8 +354,8 @@ TextureImporter:
       name: Move_Platform_Fall_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -375,8 +375,8 @@ TextureImporter:
       name: Move_Platform_Fall_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -396,8 +396,8 @@ TextureImporter:
       name: Move_Platform_Fall_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 128
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -417,8 +417,8 @@ TextureImporter:
       name: Move_Platform_Fall_13
       rect:
         serializedVersion: 2
-        x: 416
-        y: 0
+        x: 160
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -430,6 +430,195 @@ TextureImporter:
       bones: []
       spriteID: 0816cb9540320174ca8b59f6128afaa5
       internalID: 1488408857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab37d3e83c86d47abb3a67d8abf3492a
+      internalID: 644693684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c39932fede4491590bb56d9c083e1d
+      internalID: -476068443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfac3fa32a824729822b58d50e82c2f
+      internalID: -1555926639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d7b6358369d4470b8aca43ba411960
+      internalID: 555829241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dafc6e9c63ba4145b5445fb97acd565
+      internalID: 173966812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e0e843e43db4edea6c9d131799f006
+      internalID: -1258287306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098aa5787d65148ba8fd73dd6dcc16c0
+      internalID: -1955238453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c65c9c623464751ac881660865d09a
+      internalID: 1337962392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_Platform_Fall_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562dbfc59df5445f288b179ecc113f08
+      internalID: 1795528734
       vertices: []
       indices: 
       edges: []
@@ -451,14 +640,23 @@ TextureImporter:
       Move_Platform_Fall_8: -1585371851
       Move_Platform_Fall_2: 1410228849
       Move_Platform_Fall_4: 1907105237
+      Move_Platform_Fall_20: -1955238453
       Move_Platform_Fall_11: -1003475260
       Move_Platform_Fall_10: 1797061107
       Move_Platform_Fall_3: 946048165
       Move_Platform_Fall_13: 1488408857
+      Move_Platform_Fall_19: -1258287306
+      Move_Platform_Fall_18: 173966812
+      Move_Platform_Fall_15: -476068443
       Move_Platform_Fall_6: -1730831131
       Move_Platform_Fall_9: 1265757345
       Move_Platform_Fall_12: -1731615018
+      Move_Platform_Fall_22: 1795528734
+      Move_Platform_Fall_21: 1337962392
       Move_Platform_Fall_0: -2079953229
+      Move_Platform_Fall_17: 555829241
+      Move_Platform_Fall_16: -1555926639
+      Move_Platform_Fall_14: 644693684
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -111,6 +111,7 @@ namespace _Game.Scripts.Platforms
         {
             if (col.CompareTag("Player"))
             {
+                _animator.SetBool("Weight", true);
                 col.transform.parent = transform;
             }
         }
@@ -119,6 +120,7 @@ namespace _Game.Scripts.Platforms
         {
             if (col.CompareTag("Player"))
             {
+                _animator.SetBool("Weight", false);
                 col.transform.parent = null;
             }
         }

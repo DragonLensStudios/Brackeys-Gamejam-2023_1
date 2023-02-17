@@ -17,6 +17,7 @@ namespace _Game.Scripts.Platforms
 
         private IEnumerator StartFalling()
         {
+            _animator.SetTrigger("Fall");
             Vector2 currentPosition = transform.position;
             var step = speed * Time.deltaTime;
             while ((Vector2)transform.position != fallPosition)
@@ -26,7 +27,7 @@ namespace _Game.Scripts.Platforms
                 yield return null;
             }
             
-            _animator.SetTrigger("Fall");
+           
         }
 
         private void OnTriggerEnter2D(Collider2D col)

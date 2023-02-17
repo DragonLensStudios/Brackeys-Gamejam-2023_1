@@ -32,7 +32,7 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = false;
+                isLocked = !isLocked;
             }
         }
         
@@ -40,7 +40,7 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = true;
+                isLocked = !isLocked;
             }        
         }
 
@@ -111,6 +111,7 @@ namespace _Game.Scripts.Platforms
         {
             if (col.CompareTag("Player"))
             {
+                _animator.SetBool("Weight", true);
                 col.transform.parent = transform;
             }
         }
@@ -119,6 +120,7 @@ namespace _Game.Scripts.Platforms
         {
             if (col.CompareTag("Player"))
             {
+                _animator.SetBool("Weight", false);
                 col.transform.parent = null;
             }
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6509484951491270387}
   - component: {fileID: 6509484951491270398}
   - component: {fileID: 6509484951491270337}
+  - component: {fileID: 2361219550644697038}
   m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
@@ -146,11 +147,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de69c1323fa04d24bf4789d8b1cfea08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAnimationMaxRange: 3
+  delayAnimationMaxRange: 1
+  canCollideWithOtherPlatforms: 1
   normalSideTime: 3
   spikedSideTime: 3
   turnTime: 0.2
   shakeTime: 1
+--- !u!50 &2361219550644697038
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509484951491270386}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7773007873558930487
 GameObject:
   m_ObjectHideFlags: 0

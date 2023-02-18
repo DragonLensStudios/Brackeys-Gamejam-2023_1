@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -11,10 +12,13 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private bool loopInReverse;
         [SerializeField] private bool isLocked;
         [SerializeField] private string switchNameToUnlock;
+        [SerializeField] private bool toggleSwitch = false;
 
         private int _currentWaypointIndex;
         private bool _movingForward = true;
         private float _timeSinceReachedWaypoint;
+        private Vector2 targetPosition;
+        private Vector2 currentPosition;
 
         private void OnEnable()
         {
@@ -26,13 +30,20 @@ namespace _Game.Scripts.Platforms
         {
             SwitchController.OnSwitchActivated -= OnSwitchActivated;
             SwitchController.OnSwitchDeactivated -= OnSwitchDeactivated;
-
         }
         private void OnSwitchActivated(SwitchController switchController)
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = !isLocked;
+                if (toggleSwitch)
+                {
+                    isLocked = !isLocked;
+                }
+                else
+                {
+                    isLocked = false;
+                }
+                _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
             }
         }
         
@@ -40,7 +51,15 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = !isLocked;
+                if (toggleSwitch)
+                {
+                    isLocked = !isLocked;
+                }
+                else
+                {
+                    isLocked = true;
+                }
+                _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
             }        
         }
 
@@ -59,8 +78,8 @@ namespace _Game.Scripts.Platforms
 
         private void Move()
         {
-            Vector2 currentPosition = transform.position;
-            var targetPosition = waypoints[_currentWaypointIndex];
+            currentPosition = transform.position;
+            targetPosition = waypoints[_currentWaypointIndex];
             var step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
 
@@ -102,8 +121,9 @@ namespace _Game.Scripts.Platforms
         private void Update()
         {
             if (isLocked)
+            {
                 return;
-            
+            }
             Move();
         }
 
@@ -114,6 +134,7 @@ namespace _Game.Scripts.Platforms
                 _animator.SetBool("Weight", true);
                 col.transform.parent = transform;
             }
+
         }
 
         private void OnTriggerExit2D(Collider2D col)
@@ -122,6 +143,26 @@ namespace _Game.Scripts.Platforms
             {
                 _animator.SetBool("Weight", false);
                 col.transform.parent = null;
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag("Player"))
+            {
+                return;
+            }
+
+            var platform = col.gameObject.GetComponent<BasePlatform>();
+            if (platform != null)
+            {
+                if (canCollideWithOtherPlatforms && platform.CanCollideWithOtherPlatforms)
+                {
+                    if (_currentWaypointIndex > 0)
+                    {
+                        _currentWaypointIndex--;
+                    }    
+                }
             }
         }
     }

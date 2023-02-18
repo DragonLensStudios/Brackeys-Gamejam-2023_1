@@ -13,5 +13,11 @@ public class Lava : MonoBehaviour
             var respawnController = col.GetComponent<PlayerRespawnController>();
             respawnController.Respawn();
         }
+
+        var block = col.GetComponent<MovableBlock>();
+        if (block != null)
+        {
+            block.Respawn();
+        }
     }
 }

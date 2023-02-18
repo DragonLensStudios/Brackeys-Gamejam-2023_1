@@ -40,6 +40,7 @@ namespace _Game.Scripts.Platforms
             _animator.SetTrigger("Shake");
             yield return new WaitForSeconds(shakeTime);
             _animator.SetTrigger("Activate");
+            _animator.SetBool("Flipped", !_isSpikesUp);
 
             var newAngle = (transform.rotation.eulerAngles.z + 180) % 360;
             var newRotation = Quaternion.Euler(0, 0, newAngle);
@@ -68,5 +69,7 @@ namespace _Game.Scripts.Platforms
                 respawnController.Respawn();
             }
         }
+        
+        
     }
 }

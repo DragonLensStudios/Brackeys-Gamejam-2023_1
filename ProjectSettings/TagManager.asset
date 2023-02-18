@@ -7,6 +7,7 @@ TagManager:
   - Lava
   - Checkpoint
   - Enemy
+  - Platform
   layers:
   - Default
   - TransparentFX

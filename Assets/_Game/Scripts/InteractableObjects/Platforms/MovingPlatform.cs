@@ -11,6 +11,7 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private bool loopInReverse;
         [SerializeField] private bool isLocked;
         [SerializeField] private string switchNameToUnlock;
+        [SerializeField] private bool toggleSwitch = false;
 
         private int _currentWaypointIndex;
         private bool _movingForward = true;
@@ -26,13 +27,19 @@ namespace _Game.Scripts.Platforms
         {
             SwitchController.OnSwitchActivated -= OnSwitchActivated;
             SwitchController.OnSwitchDeactivated -= OnSwitchDeactivated;
-
         }
         private void OnSwitchActivated(SwitchController switchController)
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = !isLocked;
+                if (toggleSwitch)
+                {
+                    isLocked = !isLocked;
+                }
+                else
+                {
+                    isLocked = false;
+                }
             }
         }
         
@@ -40,7 +47,14 @@ namespace _Game.Scripts.Platforms
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
             {
-                isLocked = !isLocked;
+                if (toggleSwitch)
+                {
+                    isLocked = !isLocked;
+                }
+                else
+                {
+                    isLocked = true;
+                }
             }        
         }
 

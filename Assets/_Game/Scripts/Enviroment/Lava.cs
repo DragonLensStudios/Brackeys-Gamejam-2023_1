@@ -3,14 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using DLS.Core;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Lava : MonoBehaviour
 {
     [Range(0,5)][SerializeField] private float glowIntensity;
+    [Range(0,5)][SerializeField] private float lightIntensity;
     [SerializeField] private float glowUpTime;
+
+    [SerializeField] private Light2D light;
+    
 
     private Material _material;
     private float currentGlowIntensity;
+    private float currentLightIntensity;
     private bool glowingUp = true;
     private static readonly int GlowIntensity = Shader.PropertyToID("_GlowIntensity");
 
@@ -24,6 +30,7 @@ public class Lava : MonoBehaviour
         if (glowingUp)
         {
             currentGlowIntensity += glowIntensity * Time.deltaTime / glowUpTime;
+            currentLightIntensity += lightIntensity * Time.deltaTime / glowUpTime;
 
             if (currentGlowIntensity >= glowIntensity)
             {
@@ -33,6 +40,7 @@ public class Lava : MonoBehaviour
         else
         {
             currentGlowIntensity -= glowIntensity * Time.deltaTime / glowUpTime;
+            currentLightIntensity -= lightIntensity * Time.deltaTime / glowUpTime;
 
             if (currentGlowIntensity <= 0)
             {
@@ -40,6 +48,7 @@ public class Lava : MonoBehaviour
             }
         }
         _material.SetFloat(GlowIntensity, currentGlowIntensity);
+        light.intensity = currentLightIntensity;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

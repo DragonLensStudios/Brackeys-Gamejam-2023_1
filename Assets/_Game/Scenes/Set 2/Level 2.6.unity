@@ -696,8 +696,8 @@ Transform:
   - {fileID: 120500613}
   - {fileID: 1133648008}
   - {fileID: 966045672}
-  - {fileID: 367380147}
   - {fileID: 732997254}
+  - {fileID: 367380147}
   - {fileID: 999832735}
   m_Father: {fileID: 36440322}
   m_RootOrder: 0
@@ -3042,6 +3042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 459775336292367284, guid: e921d8cf4febcdb4fbd85615da4be24d, type: 3}
+      propertyPath: switchNameToUnlock
+      value: S1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e921d8cf4febcdb4fbd85615da4be24d, type: 3}
 --- !u!1001 &584474077
@@ -4109,7 +4113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395063002843263938, guid: ddfacd9e423d433458defa82e6153fc2, type: 3}
       propertyPath: waypoints.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8395063002843263938, guid: ddfacd9e423d433458defa82e6153fc2, type: 3}
       propertyPath: waypoints.Array.data[0].x

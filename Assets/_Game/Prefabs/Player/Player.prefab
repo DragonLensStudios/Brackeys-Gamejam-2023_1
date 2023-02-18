@@ -152,6 +152,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.7}
   m_EdgeRadius: 0
+--- !u!1 &7063720728394427618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3004490440994783047}
+  - component: {fileID: 8770177408545696877}
+  m_Layer: 0
+  m_Name: GroundCheckCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3004490440994783047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063720728394427618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7714236586088328873}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8770177408545696877
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063720728394427618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.07
 --- !u!1 &7714236586088328866
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +238,7 @@ Transform:
   m_Children:
   - {fileID: 8343322361395968470}
   - {fileID: 3142419953849008306}
+  - {fileID: 3004490440994783047}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -278,7 +327,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 18ab61f04bfefc44a831276d17b3804d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -304,8 +353,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  checkRadius: 0.6
-  wallJumpEnabled: 0
+  checkRadius: 0.2
+  groundCheckTransform: {fileID: 3004490440994783047}
 --- !u!114 &-3968008194765313915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +397,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: -0.34}
+  m_Offset: {x: 0.02, y: -0.32}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!61 &1074419274208814946
@@ -364,7 +413,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01428318, y: 0.058559753}
+  m_Offset: {x: 0.016294003, y: 0.05587855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -375,5 +424,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2858572, y: 0.5800839}
+  m_Size: {x: 0.15849972, y: 0.5747215}
   m_EdgeRadius: 0

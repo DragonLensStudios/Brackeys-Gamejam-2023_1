@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -12,8 +10,10 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private bool loopInReverse;
         [SerializeField] private bool isLocked;
         [SerializeField] private string switchNameToUnlock;
-        [SerializeField] private bool toggleSwitch = false;
+        [SerializeField] private bool toggleSwitch;
 
+        private Rigidbody2D _rb;
+        
         private int _currentWaypointIndex;
         private bool _movingForward = true;
         private float _timeSinceReachedWaypoint;
@@ -31,6 +31,7 @@ namespace _Game.Scripts.Platforms
             SwitchController.OnSwitchActivated -= OnSwitchActivated;
             SwitchController.OnSwitchDeactivated -= OnSwitchDeactivated;
         }
+        
         private void OnSwitchActivated(SwitchController switchController)
         {
             if (switchController.switchName.Equals(switchNameToUnlock))
@@ -44,6 +45,7 @@ namespace _Game.Scripts.Platforms
                     isLocked = false;
                 }
                 _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+                _rb.constraints = isLocked ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
             }
         }
         
@@ -60,20 +62,46 @@ namespace _Game.Scripts.Platforms
                     isLocked = true;
                 }
                 _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+                _rb.constraints = isLocked ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
             }        
         }
 
         protected override void SetupPlatform()
         {
             base.SetupPlatform();
+            _rb = GetComponent<Rigidbody2D>();
             _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+            _rb.constraints = isLocked ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
         }
 
-        [ContextMenu("ToggleLock")]
-        public void ToggleLock()
+        private void TurnAround()
         {
-            isLocked = !isLocked;
-            _animator.SetTrigger(isLocked ? "Lock" : "Unlock");
+            _movingForward = !_movingForward;
+            if (_movingForward)
+            {
+                _currentWaypointIndex++;
+                if (_currentWaypointIndex >= waypoints.Length)
+                {
+                    if (loopInReverse)
+                    {
+                        _movingForward = false;
+                        _currentWaypointIndex -= 2;
+                    }
+                    else
+                    {
+                        _currentWaypointIndex = 0;
+                    }
+                }
+            }
+            else
+            {
+                _currentWaypointIndex--;
+                if (_currentWaypointIndex < 0)
+                {
+                    _movingForward = true;
+                    _currentWaypointIndex = 1;
+                }
+            }
         }
 
         private void Move()
@@ -81,9 +109,11 @@ namespace _Game.Scripts.Platforms
             currentPosition = transform.position;
             targetPosition = waypoints[_currentWaypointIndex];
             var step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
+            // transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
+            var newPosition = Vector2.MoveTowards(currentPosition, targetPosition, step);
+            _rb.MovePosition(newPosition);
 
-            if (currentPosition == targetPosition)
+            if (Vector2.Distance(currentPosition, targetPosition) < 0.05f)
             {
                 _timeSinceReachedWaypoint += Time.deltaTime;
                 if (_timeSinceReachedWaypoint >= delay)
@@ -118,7 +148,7 @@ namespace _Game.Scripts.Platforms
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (isLocked)
             {
@@ -133,6 +163,10 @@ namespace _Game.Scripts.Platforms
             {
                 _animator.SetBool("Weight", true);
                 col.transform.parent = transform;
+            }
+            if (col.CompareTag("Platform"))
+            {
+                TurnAround();
             }
 
         }

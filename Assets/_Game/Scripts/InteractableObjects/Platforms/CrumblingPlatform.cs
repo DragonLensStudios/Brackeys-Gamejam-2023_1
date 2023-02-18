@@ -22,8 +22,12 @@ namespace _Game.Scripts.Platforms
             _animator.SetTrigger("Shake");
             yield return new WaitForSeconds(breakDelay);
             _animator.SetTrigger("Activate");
-            _collider.enabled = false;
             _animator.SetTrigger("Break");
+        }
+
+        private void DisableCollider()
+        {
+            _collider.enabled = false;
         }
 
         // called in break animation on event trigger

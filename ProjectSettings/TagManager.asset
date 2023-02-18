@@ -45,3 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 319061651
+    locked: 0
+  - name: Lava
+    uniqueID: 2569142075
+    locked: 0
+  - name: Foreground
+    uniqueID: 2813453123
+    locked: 0
+  - name: Player
+    uniqueID: 4186875073
+    locked: 0

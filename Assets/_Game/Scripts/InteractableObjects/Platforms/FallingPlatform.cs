@@ -7,34 +7,38 @@ namespace _Game.Scripts.Platforms
     {
         [SerializeField] private Vector2 fallPosition;
         [SerializeField] private float speed = 1f;
+
+        private IEnumerator falling;
         
         private void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.collider.CompareTag("Player"))
-            {
-            }
+            
         }
-
-        private IEnumerator StartFalling()
+        private IEnumerator Fall()
         {
-            _animator.SetTrigger("Fall");
-            Vector2 currentPosition = transform.position;
-            var step = speed * Time.deltaTime;
-            while ((Vector2)transform.position != fallPosition)
+            // Start pos captured for lerp
+            var startPos = transform.position;
+
+            // I don't know if this is the right formula for time, but try it and we'll adjust as needed
+            var fallTime = Vector2.Distance(transform.position, fallPosition) * speed;
+
+            var transitionTime = 0f;
+  
+            while (transitionTime < fallTime) 
             {
-                var newPosition = Vector2.MoveTowards(transform.position, fallPosition, step);
-                transform.position = newPosition;
+                transform.position = new Vector2(startPos.x, Mathf.Lerp(startPos.y, fallPosition.y, transitionTime));
+                transitionTime += Time.deltaTime;
                 yield return null;
             }
-            
-           
+
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.CompareTag("Player"))
+            if (col.CompareTag("Player") && falling == null)
             {
-                StartCoroutine(StartFalling());
+                falling = Fall();
+                StartCoroutine(falling);
                 col.transform.parent = transform;
             }
         }

@@ -47,7 +47,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeThreshold: -80
   mixer: {fileID: 24100000, guid: 694cfcc67bec2d840bcdbd61016ef098, type: 2}
-  music: []
+  music:
+  - name: Intro
+    clip: {fileID: 8300000, guid: cb0cbde0a972bac4190fe6bf5e743faa, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: Level
+    clip: {fileID: 8300000, guid: 0b297e102c4b97e4a804809caff31808, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: Ending
+    clip: {fileID: 8300000, guid: 2c7b03fce9aeee04b8a0480997fe6144, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
   soundEffects: []
   currentlyPlayingSfx: 
   currentlyPlayingMusic: 
@@ -63,4 +84,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfba9b5306c733428b42f924718ece2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicList: []
+  musicList:
+  - Intro
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Ending

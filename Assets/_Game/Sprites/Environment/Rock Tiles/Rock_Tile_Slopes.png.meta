@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -153,11 +153,12 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -2, y: 12}
-        - {x: -12, y: 12}
-        - {x: -12, y: 3}
-        - {x: 4, y: -14}
-        - {x: 4, y: -16}
+      - - {x: 8, y: 12}
+        - {x: 8, y: -5}
+        - {x: -9, y: -5}
+        - {x: -9, y: 12}
+        - {x: -16, y: 12}
+        - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 12}
       tessellationDetail: 0
@@ -172,8 +173,8 @@ TextureImporter:
       name: Rock_Tile_Slopes_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -181,14 +182,12 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 13, y: 0}
-        - {x: 13, y: 12}
-        - {x: 8, y: 12}
-        - {x: -16, y: 12}
-        - {x: -16, y: -16}
-        - {x: -4, y: -16}
-        - {x: -4, y: -14}
-        - {x: 10, y: 0}
+      - - {x: 16, y: 11}
+        - {x: 11, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -10}
+        - {x: -12, y: -16}
+        - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
       spriteID: 006bee08f749b4fdfa110f0c5bf4dd6b
@@ -201,8 +200,8 @@ TextureImporter:
       name: Rock_Tile_Slopes_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -210,10 +209,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 5, y: 16}
-        - {x: 9, y: 9}
-        - {x: 14, y: 4}
-        - {x: 16, y: 4}
+      - - {x: -11, y: 16}
+        - {x: -16, y: 12}
+        - {x: -16, y: -16}
+        - {x: 12, y: -16}
+        - {x: 16, y: -11}
         - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
@@ -227,6 +227,136 @@ TextureImporter:
       name: Rock_Tile_Slopes_3
       rect:
         serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: 12}
+        - {x: -11, y: 3}
+        - {x: 5, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e2ab37ccda8485686be5da57413932
+      internalID: -1167707376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Tile_Slopes_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13, y: 12}
+        - {x: -16, y: 12}
+        - {x: -16, y: -16}
+        - {x: -5, y: -16}
+        - {x: 9, y: 0}
+        - {x: 13, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0071b78702f94bf2b49f0be1bd92704
+      internalID: 1590722723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Tile_Slopes_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 16}
+        - {x: -12, y: 4}
+        - {x: 5, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b772c99d0187847598e46683fa92d4b3
+      internalID: -179634867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Tile_Slopes_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -6, y: -16}
+        - {x: 12, y: 2}
+        - {x: 12, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330d9aa4f94fb48e694056da016e7622
+      internalID: 158786166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Tile_Slopes_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: 16}
+        - {x: 10, y: 10}
+        - {x: 16, y: 5}
+        - {x: 16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56cfece981254c6e897d563dae98202
+      internalID: 337325003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Tile_Slopes_8
+      rect:
+        serializedVersion: 2
         x: 32
         y: 0
         width: 32
@@ -238,11 +368,12 @@ TextureImporter:
       physicsShape:
       - - {x: -16, y: 16}
         - {x: -16, y: 5}
-        - {x: -4, y: 16}
+        - {x: -5, y: 16}
+        - {x: -6, y: 16}
       tessellationDetail: 0
       bones: []
-      spriteID: 35e2ab37ccda8485686be5da57413932
-      internalID: -1167707376
+      spriteID: a7b629309dd654d6ebe137e38560cd4a
+      internalID: 1323710789
       vertices: []
       indices: 
       edges: []
@@ -260,7 +391,12 @@ TextureImporter:
     nameFileIdTable:
       Rock_Tile_Slopes_2: -736983134
       Rock_Tile_Slopes_3: -1167707376
+      Rock_Tile_Slopes_6: 158786166
       Rock_Tile_Slopes_1: 1222202905
+      Rock_Tile_Slopes_5: -179634867
+      Rock_Tile_Slopes_8: 1323710789
+      Rock_Tile_Slopes_4: 1590722723
+      Rock_Tile_Slopes_7: 337325003
       Rock_Tile_Slopes_0: -1727672347
   spritePackingTag: 
   pSDRemoveMatte: 0

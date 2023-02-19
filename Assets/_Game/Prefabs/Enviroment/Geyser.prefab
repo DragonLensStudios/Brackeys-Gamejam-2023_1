@@ -128,3 +128,4 @@ MonoBehaviour:
   upPositionTime: 3
   downPositionTime: 3
   eruptionTime: 1
+  sfx: Geyser

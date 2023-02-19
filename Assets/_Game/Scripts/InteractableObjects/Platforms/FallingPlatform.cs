@@ -7,11 +7,17 @@ namespace _Game.Scripts.Platforms
     {
         [SerializeField] private Vector2 fallPosition;
         [SerializeField] private float speed = 1f;
+        [SerializeField] private string sfx;
 
         private IEnumerator falling;
         
         private IEnumerator Fall()
         {
+            _animator.SetTrigger("Fall");
+            if (!AudioManager.instance.CurrentlyPlayingSfx.Contains(sfx))
+            {
+                AudioManager.instance.PlaySound(sfx);
+            }
             // Start pos captured for lerp
             var startPos = transform.position;
 

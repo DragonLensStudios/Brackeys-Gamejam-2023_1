@@ -12,6 +12,8 @@ public class SwitchController : MonoBehaviour
 
     public string switchName;
     public bool isActivated = false;
+    public string switchClickSfx;
+    public string switchActiationSfx;
     private Animator anim;
     private PlayerInputActions playerInput;
     private bool isInTriggerZone = false;
@@ -67,15 +69,19 @@ public class SwitchController : MonoBehaviour
 
     public void Activate()
     {
+        AudioManager.instance.PlaySound(switchClickSfx);
+        AudioManager.instance.PlaySound(switchActiationSfx);
         isActivated = true;
-        anim.SetBool("isActive",isActivated);
+        anim.SetTrigger("Activated");
         OnSwitchActivated?.Invoke(this);
     }
 
     public void Deactivate()
     {
+        AudioManager.instance.PlaySound(switchClickSfx);
+        AudioManager.instance.PlaySound(switchActiationSfx);
         isActivated = false;
-        anim.SetBool("isActive",isActivated);
+        anim.SetTrigger("Activated");
         OnSwitchDeactivated?.Invoke(this);
     }
 }

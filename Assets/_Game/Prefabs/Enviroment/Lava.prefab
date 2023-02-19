@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 3530437311462908794}
   - component: {fileID: 3530437311462908793}
   - component: {fileID: 7541956079546448484}
-  - component: {fileID: 4168061009193363501}
+  - component: {fileID: 4421490712243294753}
   m_Layer: 6
   m_Name: Lava
   m_TagString: Untagged
@@ -241,23 +241,30 @@ MonoBehaviour:
   lightIntensity: 3
   glowUpTime: 2
   light: {fileID: 5329617763046876967}
---- !u!95 &4168061009193363501
-Animator:
-  serializedVersion: 5
+  lavaSfx: Lava
+--- !u!61 &4421490712243294753
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530437311462908792}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e525fb64641264555b736fcaa12f3900, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.34166837}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.31666327}
+  m_EdgeRadius: 0

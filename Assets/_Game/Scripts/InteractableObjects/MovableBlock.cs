@@ -8,14 +8,17 @@ public class MovableBlock : MonoBehaviour
     [SerializeField] private string switchNameToUnlock;
     [SerializeField] private bool toggleSwitch = false;
     [SerializeField] protected Vector2 lastRespawnPosition;
+    [SerializeField] private string sfx;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rb;
+    private Animator _anim;
     public Vector2 LastRespawnPosition { get => lastRespawnPosition; set => lastRespawnPosition = value; }
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
         if (isLocked)
             Lock();
         else
@@ -77,18 +80,22 @@ public class MovableBlock : MonoBehaviour
 
     private void Lock()
     {
+        _anim.SetTrigger("Lock");
         _spriteRenderer.sprite = lockedSprite;
         _rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void Unlock()
     {
+        _anim.SetTrigger("Unlock");
         _spriteRenderer.sprite = unlockedSprite;
         _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     
     public void Respawn()
     {
+        _anim.SetTrigger("Respawn");
+        AudioManager.instance.PlaySound(sfx);
         transform.position = lastRespawnPosition;
     }
 }

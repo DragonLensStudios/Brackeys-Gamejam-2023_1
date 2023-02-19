@@ -1,3 +1,5 @@
+using System;
+using DLS.Core;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -109,10 +111,16 @@ namespace _Game.Scripts.Platforms
             currentPosition = transform.position;
             targetPosition = waypoints[_currentWaypointIndex];
             var step = speed * Time.deltaTime;
-            // transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
+            //transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
             var newPosition = Vector2.MoveTowards(currentPosition, targetPosition, step);
             _rb.MovePosition(newPosition);
-
+            // Move child game object with the parent game object
+            foreach (Transform child in transform)
+            {
+                Vector2 childNewPosition = (Vector2)child.position + newPosition - currentPosition;
+                child.position = childNewPosition;
+            }
+            
             if (Vector2.Distance(currentPosition, targetPosition) < 0.05f)
             {
                 _timeSinceReachedWaypoint += Time.deltaTime;
@@ -163,13 +171,14 @@ namespace _Game.Scripts.Platforms
             {
                 _animator.SetBool("Weight", true);
                 col.transform.parent = transform;
+
             }
             if (col.CompareTag("Platform"))
             {
                 TurnAround();
             }
-
         }
+        
 
         private void OnTriggerExit2D(Collider2D col)
         {

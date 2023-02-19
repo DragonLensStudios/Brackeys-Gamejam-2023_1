@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneMusicPlayer : MonoBehaviour
@@ -21,6 +22,10 @@ public class SceneMusicPlayer : MonoBehaviour
     {
         if(musicList.Count > 0)
         {
+            if (AudioManager.instance.CurrentlyPlayingMusic == musicList[scene.buildIndex])
+            {
+                return;
+            }
             if (scene.buildIndex > 0)
             {
                 AudioManager.instance.StopMusic(musicList[scene.buildIndex - 1]);

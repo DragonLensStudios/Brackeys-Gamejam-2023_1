@@ -6,24 +6,19 @@ namespace DLS.Core
 {
     public class PlayerMovementController : MonoBehaviour
     {
+        public Rigidbody2D rb;
+
         [SerializeField] protected float moveSpeed = 3f;
         [SerializeField] protected Vector2 movement;
         [SerializeField] protected int jumpsAllowed = 2;
         [SerializeField] protected float jumpForce = 7f;
         [SerializeField] protected float multiJumpForce = 4.5f;
-        [SerializeField] private float jumpHorizontalForce = 2f;
         [SerializeField] protected LayerMask whatIsGround;
         [SerializeField] protected float checkRadius = 0.6f;
         [SerializeField] protected Transform groundCheckTransform;
-        // [SerializeField] protected bool wallJumpEnabled = false;
-        protected Rigidbody2D rb;
         protected PlayerInputActions playerInput;
         protected PlayerState playerState;
         protected int currentJumps = 1;
-        
-        // // Cling constants
-        // private const float ClingDrag = 5f;
-        // private const float DefaultDrag = 0f;
         
         protected void Awake()
         {
@@ -70,11 +65,7 @@ namespace DLS.Core
                 rb.velocity = new Vector2(rb.velocity.x, multiJumpForce);
                 currentJumps++;
             }
-            // else if (playerState.IsAttachedToWall && wallJumpEnabled)
-            // {
-            //     var jumpDirection = playerState.isAttachedToLeftWall ? 1f : -1f;
-            //     rb.velocity = new Vector2(rb.velocity.x + jumpDirection * jumpHorizontalForce, jumpForce);
-            // }
+
         }
         protected void FixedUpdate()
         {
@@ -84,24 +75,7 @@ namespace DLS.Core
             {
                 currentJumps = 1;
             }
-
-            // if (wallJumpEnabled)
-            // {
-            //     Cling();
-            // }
         }
         
-        // private void Cling()
-        // {
-        //     if (playerState.IsAttachedToWall && !playerState.isGrounded)
-        //     {
-        //         rb.drag = ClingDrag;
-        //     }
-        //     
-        //     if (!playerState.IsAttachedToWall || playerState.isGrounded)
-        //     {
-        //         rb.drag = DefaultDrag;
-        //     }
-        // }
     }
 }

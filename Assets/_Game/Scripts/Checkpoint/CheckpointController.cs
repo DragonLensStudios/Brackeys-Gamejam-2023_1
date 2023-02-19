@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
+    [SerializeField] private string sfx;
     private Animator anim;
     private bool isActivated = false;
 
@@ -20,6 +21,7 @@ public class CheckpointController : MonoBehaviour
         {
             if (!isActivated)
             {
+                AudioManager.instance.PlaySound(sfx);
                 anim.SetTrigger("Activate");
                 isActivated = true;
             }

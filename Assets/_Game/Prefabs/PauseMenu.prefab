@@ -2262,7 +2262,7 @@ MonoBehaviour:
   ExitOnNewPagePush: 0
   firstFocusItem: {fileID: 0}
   AnimationSpeed: 1
-  EntrySfx: 
+  EntrySfx: UIClick
   ExitSfx: 
   EntryMode: 0
   EntryDirection: 0
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   ExitOnNewPagePush: 0
   firstFocusItem: {fileID: 5665173377582186568}
   AnimationSpeed: 1
-  EntrySfx: 
+  EntrySfx: UIClick
   ExitSfx: 
   EntryMode: 0
   EntryDirection: 0

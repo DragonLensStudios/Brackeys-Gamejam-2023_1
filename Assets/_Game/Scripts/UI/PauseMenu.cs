@@ -46,7 +46,7 @@ namespace _Game.Scripts.UI
         {
             _isPaused = !_isPaused;
             
-            // menuBackground.SetActive(isPaused);
+            menuBackground.SetActive(_isPaused);
             mainPage.gameObject.SetActive(_isPaused);
 
             if (_isPaused)

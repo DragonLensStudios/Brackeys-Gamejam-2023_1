@@ -147,6 +147,20 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
     loop: 0
+  - name: UiClick
+    clip: {fileID: 8300000, guid: 084ae6c08b0897746afcf7852a6e1571, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: 28f16a5f630a3cd479cbc40d4c0dd54d, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
   currentlyPlayingSfx: []
   currentlyPlayingMusic: []
 --- !u!114 &6665690964804876828

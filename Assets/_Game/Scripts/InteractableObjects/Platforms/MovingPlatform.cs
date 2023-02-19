@@ -117,8 +117,12 @@ namespace _Game.Scripts.Platforms
             // Move child game object with the parent game object
             foreach (Transform child in transform)
             {
-                Vector2 childNewPosition = (Vector2)child.position + newPosition - currentPosition;
-                child.position = childNewPosition;
+                var box = GetComponent<MovableBlock>();
+                if (box == null)
+                {
+                    Vector2 childNewPosition = (Vector2)child.position + newPosition - currentPosition;
+                    child.position = childNewPosition;
+                }
             }
             
             if (Vector2.Distance(currentPosition, targetPosition) < 0.05f)
@@ -177,12 +181,22 @@ namespace _Game.Scripts.Platforms
             {
                 TurnAround();
             }
+            if (col.CompareTag("Box"))
+            {
+                _animator.SetBool("Weight", true);
+                col.transform.parent = transform;
+            }
         }
         
 
         private void OnTriggerExit2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
+            {
+                _animator.SetBool("Weight", false);
+                col.transform.parent = null;
+            }
+            if (col.CompareTag("Box"))
             {
                 _animator.SetBool("Weight", false);
                 col.transform.parent = null;

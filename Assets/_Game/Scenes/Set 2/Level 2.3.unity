@@ -3029,7 +3029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2314906251084377990, guid: 8cec981d4ea0f8940aa102fe464e3abb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 354
+      value: 353.99997
       objectReference: {fileID: 0}
     - target: {fileID: 4623395265025771660, guid: 8cec981d4ea0f8940aa102fe464e3abb, type: 3}
       propertyPath: m_Pivot.x
@@ -4230,10 +4230,6 @@ PrefabInstance:
     - target: {fileID: 7714236586088328875, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
       propertyPath: jumpForce
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658210128462613054, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b935ef42e04980e4db17442a3d1f85df, type: 3}

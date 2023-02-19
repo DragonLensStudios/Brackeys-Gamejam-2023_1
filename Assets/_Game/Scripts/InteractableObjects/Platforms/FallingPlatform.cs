@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Video;
 
 namespace _Game.Scripts.Platforms
 {
@@ -11,17 +10,10 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private string sfx;
 
         private IEnumerator falling;
-        private Animator anim;
-
-        protected override void Awake()
-        {
-            base.Awake();
-            anim = GetComponent<Animator>();
-        }
-
+        
         private IEnumerator Fall()
         {
-            anim.SetTrigger("Fall");
+            _animator.SetTrigger("Fall");
             if (!AudioManager.instance.CurrentlyPlayingSfx.Contains(sfx))
             {
                 AudioManager.instance.PlaySound(sfx);
@@ -36,8 +28,11 @@ namespace _Game.Scripts.Platforms
   
             while (transitionTime < fallTime) 
             {
-                transform.position = new Vector2(startPos.x, Mathf.Lerp(startPos.y, fallPosition.y, transitionTime));
-                transitionTime += Time.deltaTime;
+                if (!isPaused)
+                {
+                    transform.position = new Vector2(startPos.x, Mathf.Lerp(startPos.y, fallPosition.y, transitionTime));
+                    transitionTime += Time.deltaTime;
+                }
                 yield return null;
             }
 

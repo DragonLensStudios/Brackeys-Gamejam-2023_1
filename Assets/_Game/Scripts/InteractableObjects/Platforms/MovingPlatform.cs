@@ -1,5 +1,3 @@
-using System;
-using DLS.Core;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -22,14 +20,16 @@ namespace _Game.Scripts.Platforms
         private Vector2 targetPosition;
         private Vector2 currentPosition;
 
-        private void OnEnable()
+        protected override void SubscribeToEvents()
         {
+            base.SubscribeToEvents();
             SwitchController.OnSwitchActivated += OnSwitchActivated;
             SwitchController.OnSwitchDeactivated += OnSwitchDeactivated;
         }
 
-        private void OnDisable()
+        protected override void UnsubscribeFromEvents()
         {
+            base.UnsubscribeFromEvents();
             SwitchController.OnSwitchActivated -= OnSwitchActivated;
             SwitchController.OnSwitchDeactivated -= OnSwitchDeactivated;
         }
@@ -108,10 +108,12 @@ namespace _Game.Scripts.Platforms
 
         private void Move()
         {
+            if (isPaused)
+                return;
+            
             currentPosition = transform.position;
             targetPosition = waypoints[_currentWaypointIndex];
             var step = speed * Time.deltaTime;
-            //transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
             var newPosition = Vector2.MoveTowards(currentPosition, targetPosition, step);
             _rb.MovePosition(newPosition);
             // Move child game object with the parent game object

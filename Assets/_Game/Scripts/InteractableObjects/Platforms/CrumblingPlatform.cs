@@ -25,6 +25,7 @@ namespace _Game.Scripts.Platforms
             _animator.SetTrigger("Break");
         }
 
+        // called in the middle of break animation on event trigger
         private void DisableCollider()
         {
             _collider.enabled = false;

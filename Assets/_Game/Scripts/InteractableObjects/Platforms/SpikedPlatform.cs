@@ -17,6 +17,9 @@ namespace _Game.Scripts.Platforms
 
         private void Update()
         {
+            if (isPaused)
+                _lastTurnTime += Time.deltaTime;
+            
             if (_isSpikesUp)
             {
                 if (Time.time - _lastTurnTime > spikedSideTime - shakeTime)
@@ -48,7 +51,8 @@ namespace _Game.Scripts.Platforms
 
             while (Mathf.Abs(transform.rotation.eulerAngles.z - newAngle) > 0.01f)
             {
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, step);
+                if (!isPaused)
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, step);
                 yield return _turnFractionTime;
             }
 

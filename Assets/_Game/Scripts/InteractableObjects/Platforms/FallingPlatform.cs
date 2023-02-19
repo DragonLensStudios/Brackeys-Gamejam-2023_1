@@ -10,10 +10,6 @@ namespace _Game.Scripts.Platforms
 
         private IEnumerator falling;
         
-        private void OnCollisionEnter2D(Collision2D col)
-        {
-            
-        }
         private IEnumerator Fall()
         {
             // Start pos captured for lerp
@@ -26,8 +22,11 @@ namespace _Game.Scripts.Platforms
   
             while (transitionTime < fallTime) 
             {
-                transform.position = new Vector2(startPos.x, Mathf.Lerp(startPos.y, fallPosition.y, transitionTime));
-                transitionTime += Time.deltaTime;
+                if (!isPaused)
+                {
+                    transform.position = new Vector2(startPos.x, Mathf.Lerp(startPos.y, fallPosition.y, transitionTime));
+                    transitionTime += Time.deltaTime;
+                }
                 yield return null;
             }
 

@@ -6,7 +6,11 @@ namespace DLS.Core
 {
     public class PlayerRespawnController : MonoBehaviour
     {
+        public string deathSfx;
+        public string respawnSfx;
         [SerializeField] protected Vector2 lastRespawnPosition;
+        
+        public Animator anim;
 
         private PlayerInputActions playerInput;
         
@@ -17,6 +21,7 @@ namespace DLS.Core
         {
             lastRespawnPosition = transform.position;
             playerInput = new PlayerInputActions();
+            anim = GetComponent<Animator>();
         }
 
         private void OnEnable()
@@ -38,6 +43,7 @@ namespace DLS.Core
         
         public void Respawn()
         {
+            AudioManager.instance.PlaySound(respawnSfx);
             transform.position = lastRespawnPosition;
         }
     }

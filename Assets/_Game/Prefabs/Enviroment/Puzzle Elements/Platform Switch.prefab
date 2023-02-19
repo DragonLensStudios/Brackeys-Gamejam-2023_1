@@ -147,3 +147,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchName: S1
   isActivated: 0
+  switchClickSfx: Click
+  switchActiationSfx: Activation

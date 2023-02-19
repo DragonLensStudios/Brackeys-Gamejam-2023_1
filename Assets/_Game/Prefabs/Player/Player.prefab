@@ -346,12 +346,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d804e0c67f44db98ff2c5ceace2e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   moveSpeed: 3
   movement: {x: 0, y: 0}
   jumpsAllowed: 2
   jumpForce: 7
   multiJumpForce: 4.5
-  jumpHorizontalForce: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -369,7 +369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3746e8cbd17144d9878625721a8d9831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSfx: Death
+  respawnSfx: Respawn
   lastRespawnPosition: {x: 0, y: 0}
+  anim: {fileID: 0}
 --- !u!114 &5889381010878634200
 MonoBehaviour:
   m_ObjectHideFlags: 0

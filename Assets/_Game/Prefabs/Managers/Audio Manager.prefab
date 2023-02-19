@@ -69,9 +69,79 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
     loop: 1
-  soundEffects: []
-  currentlyPlayingSfx: 
-  currentlyPlayingMusic: 
+  soundEffects:
+  - name: BlockRespawn
+    clip: {fileID: 8300000, guid: 1fabd69d8b4d0ac4b88e64b4bfc6c970, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Click
+    clip: {fileID: 8300000, guid: efb48eec3a2dcc74c81ff3ea8e6b1a7a, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Activation
+    clip: {fileID: 8300000, guid: 9f0e54714611e9b4585fb8440408befe, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Death
+    clip: {fileID: 8300000, guid: 984c50f8a55999443bb0a7a9b7a696fb, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Geyser
+    clip: {fileID: 8300000, guid: 03aaed07441a88241970fff5be47028b, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Lava
+    clip: {fileID: 8300000, guid: 4eef652a6160f14419e25c24cdc0d2ea, type: 3}
+    volume: 0.5
+    pitch: 1
+    randomVolume: 0.3
+    randomPitch: 0
+    loop: 1
+  - name: Respawn
+    clip: {fileID: 8300000, guid: e2c5acd9256646f49a84d0fb24ce2298, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: 3ae14c9fa960a084680e928addae94a7, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Spark
+    clip: {fileID: 8300000, guid: 79d15d3a00d523a4b99904bd44b86711, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Spike
+    clip: {fileID: 8300000, guid: 5e0a4d4a54b504e4db274a7c5d5919a5, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  currentlyPlayingSfx: []
+  currentlyPlayingMusic: []
 --- !u!114 &6665690964804876828
 MonoBehaviour:
   m_ObjectHideFlags: 0

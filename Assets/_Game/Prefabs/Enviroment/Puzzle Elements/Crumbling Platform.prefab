@@ -181,6 +181,7 @@ MonoBehaviour:
   delayAnimationMaxRange: 1
   canCollideWithOtherPlatforms: 1
   breakDelay: 2
+  sfx: RockBreak
 --- !u!50 &8678092966423282887
 Rigidbody2D:
   serializedVersion: 4

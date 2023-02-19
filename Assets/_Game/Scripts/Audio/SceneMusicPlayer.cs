@@ -22,7 +22,7 @@ public class SceneMusicPlayer : MonoBehaviour
     {
         if(musicList.Count > 0)
         {
-            if (AudioManager.instance.CurrentlyPlayingMusic == musicList[scene.buildIndex])
+            if (AudioManager.instance.CurrentlyPlayingMusic.Contains(musicList[scene.buildIndex]))
             {
                 return;
             }

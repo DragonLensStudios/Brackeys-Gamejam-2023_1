@@ -6,6 +6,7 @@ namespace _Game.Scripts.Platforms
     public class CrumblingPlatform : BasePlatform
     {
         [SerializeField] private float breakDelay;
+        [SerializeField] private string sfx;
 
         private bool _isBreaking;
         private Collider2D _collider;
@@ -18,6 +19,8 @@ namespace _Game.Scripts.Platforms
 
         private IEnumerator StartCrumbling()
         {
+            AudioManager.instance.PlaySound(sfx);
+            
             _isBreaking = true;
             _animator.SetTrigger("Shake");
             yield return new WaitForSeconds(breakDelay);

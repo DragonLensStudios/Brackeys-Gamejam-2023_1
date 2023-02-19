@@ -8,6 +8,7 @@ public class Geyser : MonoBehaviour
     [SerializeField] private float upPositionTime;
     [SerializeField] private float downPositionTime;
     [SerializeField] private float eruptionTime;
+    [SerializeField] private string sfx;
 
     private bool _isRisen;
     private float _lastEruptionTime;  // last time geyser risen or fallen
@@ -32,6 +33,7 @@ public class Geyser : MonoBehaviour
 
     private IEnumerator ToggleEruption()
     {
+        AudioManager.instance.PlaySound(sfx);
         _lastEruptionTime = Time.time + eruptionTime;
 
         Vector2 oldPosition = transform.position;
@@ -52,7 +54,9 @@ public class Geyser : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             var respawnController = col.GetComponent<PlayerRespawnController>();
-            respawnController.Respawn();
+            respawnController.anim.SetTrigger("Dead");
+            AudioManager.instance.PlaySound(respawnController.deathSfx);
+            //respawnController.Respawn();
         }
     }
 }

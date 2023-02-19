@@ -22,6 +22,10 @@ public class SceneMusicPlayer : MonoBehaviour
     {
         if(musicList.Count > 0)
         {
+            if (string.IsNullOrWhiteSpace(musicList[scene.buildIndex]))
+            {
+                return;;
+            }
             if (AudioManager.instance.CurrentlyPlayingMusic.Contains(musicList[scene.buildIndex]))
             {
                 return;

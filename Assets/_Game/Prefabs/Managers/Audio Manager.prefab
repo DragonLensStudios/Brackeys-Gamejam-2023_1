@@ -48,6 +48,13 @@ MonoBehaviour:
   volumeThreshold: -80
   mixer: {fileID: 24100000, guid: 694cfcc67bec2d840bcdbd61016ef098, type: 2}
   music:
+  - name: CarCrash
+    clip: {fileID: 8300000, guid: d87e5af9afbcfec48810afffcd4f5ef2, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
   - name: Intro
     clip: {fileID: 8300000, guid: cb0cbde0a972bac4190fe6bf5e743faa, type: 3}
     volume: 1
@@ -155,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicList:
+  - CarCrash
   - Intro
   - Level
   - Level

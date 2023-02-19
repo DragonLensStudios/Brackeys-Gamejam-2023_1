@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2428602778071758518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5022871136501406885}
+  - component: {fileID: 3676289079978481248}
+  - component: {fileID: 6665690964804876828}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5022871136501406885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428602778071758518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3676289079978481248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428602778071758518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63e3e06b1d909143b43357b98e47323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeThreshold: -80
+  mixer: {fileID: 24100000, guid: 694cfcc67bec2d840bcdbd61016ef098, type: 2}
+  music:
+  - name: Intro
+    clip: {fileID: 8300000, guid: cb0cbde0a972bac4190fe6bf5e743faa, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: Level
+    clip: {fileID: 8300000, guid: 0b297e102c4b97e4a804809caff31808, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  - name: Ending
+    clip: {fileID: 8300000, guid: 2c7b03fce9aeee04b8a0480997fe6144, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 1
+  soundEffects:
+  - name: BlockRespawn
+    clip: {fileID: 8300000, guid: 1fabd69d8b4d0ac4b88e64b4bfc6c970, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Click
+    clip: {fileID: 8300000, guid: efb48eec3a2dcc74c81ff3ea8e6b1a7a, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Activation
+    clip: {fileID: 8300000, guid: 9f0e54714611e9b4585fb8440408befe, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Death
+    clip: {fileID: 8300000, guid: 984c50f8a55999443bb0a7a9b7a696fb, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Geyser
+    clip: {fileID: 8300000, guid: 03aaed07441a88241970fff5be47028b, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Lava
+    clip: {fileID: 8300000, guid: 4eef652a6160f14419e25c24cdc0d2ea, type: 3}
+    volume: 0.5
+    pitch: 1
+    randomVolume: 0.3
+    randomPitch: 0
+    loop: 1
+  - name: Respawn
+    clip: {fileID: 8300000, guid: e2c5acd9256646f49a84d0fb24ce2298, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: 3ae14c9fa960a084680e928addae94a7, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Spark
+    clip: {fileID: 8300000, guid: 79d15d3a00d523a4b99904bd44b86711, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Spike
+    clip: {fileID: 8300000, guid: 5e0a4d4a54b504e4db274a7c5d5919a5, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  currentlyPlayingSfx: []
+  currentlyPlayingMusic: []
+--- !u!114 &6665690964804876828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428602778071758518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfba9b5306c733428b42f924718ece2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicList:
+  - Intro
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Level
+  - Ending

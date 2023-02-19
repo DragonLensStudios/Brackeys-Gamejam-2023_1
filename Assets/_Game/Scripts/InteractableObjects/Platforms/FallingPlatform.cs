@@ -11,13 +11,17 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private string sfx;
 
         private IEnumerator falling;
-        
-        private void OnCollisionEnter2D(Collision2D col)
+        private Animator anim;
+
+        protected override void Awake()
         {
-            
+            base.Awake();
+            anim = GetComponent<Animator>();
         }
+
         private IEnumerator Fall()
         {
+            anim.SetTrigger("Fall");
             if (!AudioManager.instance.CurrentlyPlayingSfx.Contains(sfx))
             {
                 AudioManager.instance.PlaySound(sfx);

@@ -20,7 +20,8 @@ namespace DLS.Core
         protected PlayerInputActions playerInput;
         protected PlayerState playerState;
         protected int currentJumps = 1;
-        
+        protected Animator anim;
+        protected SpriteRenderer sr;
         // // Cling constants
         // private const float ClingDrag = 5f;
         // private const float DefaultDrag = 0f;
@@ -30,6 +31,8 @@ namespace DLS.Core
             playerInput = new PlayerInputActions();
             rb = GetComponent<Rigidbody2D>();
             playerState = GetComponent<PlayerState>();
+            anim = GetComponent<Animator>();
+            sr = GetComponent<SpriteRenderer>();
         }
         
         protected virtual void OnEnable()
@@ -52,11 +55,22 @@ namespace DLS.Core
         protected void MoveOncanceled(InputAction.CallbackContext input)
         {
             movement = Vector2.zero;
+            anim.SetBool("isMoving", false);
         }
 
         protected void MoveOnperformed(InputAction.CallbackContext input)
         {
             movement = input.ReadValue<Vector2>();
+            anim.SetBool("isMoving", true);
+            if (movement.x < 0)
+            {
+                sr.flipX = true;
+            }
+            else
+            {
+                sr.flipX = false;
+            }
+
         }
         private void JumpOnperformed(InputAction.CallbackContext input)
         {
@@ -67,6 +81,7 @@ namespace DLS.Core
             }
             else if (currentJumps < jumpsAllowed)
             {
+                anim.SetTrigger("Boost");
                 rb.velocity = new Vector2(rb.velocity.x, multiJumpForce);
                 currentJumps++;
             }
@@ -80,6 +95,7 @@ namespace DLS.Core
         {
             rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
             playerState.isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, checkRadius, whatIsGround);
+            anim.SetBool("isGrounded", playerState.isGrounded);
             if (playerState.isGrounded)
             {
                 currentJumps = 1;

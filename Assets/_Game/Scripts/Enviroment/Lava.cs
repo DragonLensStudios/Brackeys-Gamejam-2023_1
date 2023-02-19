@@ -12,7 +12,7 @@ public class Lava : MonoBehaviour
     [SerializeField] private float glowUpTime;
 
     [SerializeField] private Light2D light;
-    
+    [SerializeField] private string lavaSfx;
 
     private Material _material;
     private float currentGlowIntensity;
@@ -23,6 +23,14 @@ public class Lava : MonoBehaviour
     private void Awake()
     {
         _material = GetComponent<SpriteRenderer>().material;
+    }
+
+    private void Start()
+    {
+        if (!AudioManager.instance.CurrentlyPlayingSfx.Contains(lavaSfx))
+        {
+            AudioManager.instance.PlaySound(lavaSfx);
+        }
     }
 
     private void Update()
@@ -56,7 +64,9 @@ public class Lava : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             var respawnController = col.GetComponent<PlayerRespawnController>();
-            respawnController.Respawn();
+            respawnController.anim.SetTrigger("Dead");
+            AudioManager.instance.PlaySound(respawnController.deathSfx);
+            // respawnController.Respawn();
         }
 
         var block = col.GetComponent<MovableBlock>();

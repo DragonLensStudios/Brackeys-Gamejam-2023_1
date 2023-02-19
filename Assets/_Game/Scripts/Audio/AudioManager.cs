@@ -20,15 +20,15 @@ public class AudioManager : MonoBehaviour
     private Audio[] soundEffects;
 
     [SerializeField]
-    private string currentlyPlayingSfx, currentlyPlayingMusic;
+    private List<string> currentlyPlayingSfx, currentlyPlayingMusic;
 
 
     public static AudioManager instance;
 
     public Audio[] Music { get => music; }
     public Audio[] SoundEffects { get => soundEffects; }
-    public string CurrentlyPlayingSfx { get => currentlyPlayingSfx; }
-    public string CurrentlyPlayingMusic { get => currentlyPlayingMusic; }
+    public List<string> CurrentlyPlayingSfx { get => currentlyPlayingSfx; }
+    public List<string> CurrentlyPlayingMusic { get => currentlyPlayingMusic; }
 
     // Awake is always called before any Start functions
     void Awake()
@@ -87,8 +87,9 @@ public class AudioManager : MonoBehaviour
         {
             if (music[i].audioName == name)
             {
-                currentlyPlayingMusic = name;
+                currentlyPlayingMusic.Add(name);
                 music[i].Play();
+                StartCoroutine(StopPlayingMusicAfterAudioClipPlays(soundEffects[i].audioClip, name));
                 return;
             }
         }
@@ -103,8 +104,9 @@ public class AudioManager : MonoBehaviour
         {
             if (soundEffects[i].audioName == name)
             {
-                currentlyPlayingSfx = name;
+                currentlyPlayingSfx.Add(name);
                 soundEffects[i].Play();
+                StartCoroutine(StopPlayingSoundAfterAudioClipPlays(soundEffects[i].audioClip, name));
                 return;
             }
         }
@@ -189,7 +191,7 @@ public class AudioManager : MonoBehaviour
         {
             if (music[i].audioName == name)
             {
-                currentlyPlayingMusic = "";
+                currentlyPlayingMusic.Remove(name);
                 music[i].Stop();
                 return;
             }
@@ -207,7 +209,7 @@ public class AudioManager : MonoBehaviour
         {
             if (soundEffects[i].audioName == name)
             {
-                currentlyPlayingSfx = "";
+                currentlyPlayingSfx.Remove(name);
                 soundEffects[i].Stop();
                 return;
             }
@@ -295,5 +297,17 @@ public class AudioManager : MonoBehaviour
     public void ClearSoundEffectsVolume()
     {
         mixer.ClearFloat("effectsVolume");
+    }
+
+    private IEnumerator StopPlayingSoundAfterAudioClipPlays(AudioClip clip, string name)
+    {
+        yield return new WaitForSeconds(clip.length);
+        currentlyPlayingSfx.Remove(name);
+    }
+    
+    private IEnumerator StopPlayingMusicAfterAudioClipPlays(AudioClip clip, string name)
+    {
+        yield return new WaitForSeconds(clip.length);
+        currentlyPlayingMusic.Remove(name);
     }
 }

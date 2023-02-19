@@ -10,6 +10,7 @@ namespace _Game.Scripts.Platforms
         [SerializeField] private float spikedSideTime;
         [SerializeField] private float turnTime;
         [SerializeField] private float shakeTime;
+        [SerializeField] private string spikeSfx;
 
         private bool _isSpikesUp;
         private float _lastTurnTime;
@@ -53,6 +54,13 @@ namespace _Game.Scripts.Platforms
             }
 
             _isSpikesUp = !_isSpikesUp;
+            if (_isSpikesUp)
+            {
+                if (!AudioManager.instance.CurrentlyPlayingSfx.Contains(spikeSfx))
+                {
+                    AudioManager.instance.PlaySound(spikeSfx);
+                }
+            }
         }
 
         protected override void SetupPlatform()
@@ -65,8 +73,12 @@ namespace _Game.Scripts.Platforms
         {
             if (col.CompareTag("Player"))
             {
-                var respawnController = col.GetComponent<PlayerRespawnController>();
-                respawnController.Respawn();
+                if (_isSpikesUp)
+                {
+                    var respawnController = col.GetComponent<PlayerRespawnController>();
+                    respawnController.anim.SetTrigger("Dead");
+                    AudioManager.instance.PlaySound(respawnController.deathSfx); 
+                }
             }
         }
         

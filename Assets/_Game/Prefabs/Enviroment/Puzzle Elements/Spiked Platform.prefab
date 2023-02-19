@@ -153,6 +153,7 @@ MonoBehaviour:
   spikedSideTime: 3
   turnTime: 0.2
   shakeTime: 1
+  spikeSfx: Spike
 --- !u!50 &2361219550644697038
 Rigidbody2D:
   serializedVersion: 4

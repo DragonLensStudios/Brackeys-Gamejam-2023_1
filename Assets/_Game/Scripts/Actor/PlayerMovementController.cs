@@ -1,4 +1,5 @@
 using System;
+using _Game.Scripts.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,9 @@ namespace DLS.Core
         protected int currentJumps = 1;
         protected Animator anim;
         protected SpriteRenderer sr;
+        
+        private bool isPaused;
+        
         protected void Awake()
         {
             playerInput = new PlayerInputActions();
@@ -37,7 +41,21 @@ namespace DLS.Core
             playerInput.Player.Jump.performed += JumpOnperformed;
 
             playerInput.Enable();
+
+            PauseMenu.OnPaused += PauseControls;
+            PauseMenu.OnUnpaused += UnpauseControls;
         }
+
+        private void UnpauseControls()
+        {
+            isPaused = false;
+        }
+
+        private void PauseControls()
+        {
+            isPaused = true;
+        }
+
         protected virtual void OnDisable()
         {
             playerInput.Player.Move.performed -= MoveOnperformed;
@@ -45,6 +63,9 @@ namespace DLS.Core
             playerInput.Player.Jump.performed -= JumpOnperformed;
 
             playerInput.Disable();
+
+            PauseMenu.OnPaused -= PauseControls;
+            PauseMenu.OnUnpaused -= UnpauseControls;
         }
         
         protected void MoveOncanceled(InputAction.CallbackContext input)
@@ -69,6 +90,9 @@ namespace DLS.Core
         }
         private void JumpOnperformed(InputAction.CallbackContext input)
         {
+            if (isPaused)
+                return;
+            
             if (playerState.isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -84,7 +108,8 @@ namespace DLS.Core
         }
         protected void FixedUpdate()
         {
-            rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
+            if (!isPaused)
+                rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
             playerState.isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, checkRadius, whatIsGround);
             anim.SetBool("isGrounded", playerState.isGrounded);
             if (playerState.isGrounded)

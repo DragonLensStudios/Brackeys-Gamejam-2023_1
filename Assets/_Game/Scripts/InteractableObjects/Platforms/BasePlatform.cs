@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using _Game.Scripts.UI;
 using UnityEngine;
 
 namespace _Game.Scripts.Platforms
@@ -17,6 +18,7 @@ namespace _Game.Scripts.Platforms
 
         protected Rigidbody2D rb;
         protected Animator _animator;
+        protected bool isPaused;
 
         protected virtual void SetupPlatform()
         {
@@ -38,6 +40,38 @@ namespace _Game.Scripts.Platforms
         {
             yield return new WaitForSeconds(Random.Range(0, maxDuration));
             _animator.SetTrigger("Activate");
+        }
+
+        private void PausePlatform()
+        {
+            isPaused = true;
+        }
+
+        private void UnpausePlatform()
+        {
+            isPaused = false;
+        }
+
+        protected virtual void SubscribeToEvents()
+        {
+            PauseMenu.OnPaused += PausePlatform;
+            PauseMenu.OnUnpaused += UnpausePlatform;
+        }
+
+        protected virtual void UnsubscribeFromEvents()
+        {
+            PauseMenu.OnPaused -= PausePlatform;
+            PauseMenu.OnUnpaused -= UnpausePlatform;
+        }
+
+        private void OnEnable()
+        {
+            SubscribeToEvents();
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeFromEvents();
         }
     }
 }

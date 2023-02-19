@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Canvas))]
 [DisallowMultipleComponent]
 public class MenuController : MonoBehaviour
 {

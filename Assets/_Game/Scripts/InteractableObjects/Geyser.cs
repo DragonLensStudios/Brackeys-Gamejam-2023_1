@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using _Game.Scripts.UI;
 using DLS.Core;
 using UnityEngine;
 
@@ -12,9 +14,13 @@ public class Geyser : MonoBehaviour
 
     private bool _isRisen;
     private float _lastEruptionTime;  // last time geyser risen or fallen
+    private bool isPaused;
     
     private void Update()
     {
+        if (isPaused)
+            _lastEruptionTime += Time.deltaTime;
+        
         if (_isRisen)
         {
             if (Time.time - _lastEruptionTime > upPositionTime)
@@ -42,7 +48,8 @@ public class Geyser : MonoBehaviour
         
         while ((Vector2)transform.position != newPosition)
         {
-            transform.position = Vector2.MoveTowards(transform.position, newPosition, step);
+            if (!isPaused)
+                transform.position = Vector2.MoveTowards(transform.position, newPosition, step);
             yield return null;
         }
 
@@ -58,5 +65,27 @@ public class Geyser : MonoBehaviour
             AudioManager.instance.PlaySound(respawnController.deathSfx);
             //respawnController.Respawn();
         }
+    }
+
+    private void OnEnable()
+    {
+        PauseMenu.OnPaused += PauseControls;
+        PauseMenu.OnUnpaused += UnpauseControls;
+    }
+
+    private void OnDisable()
+    {
+        PauseMenu.OnPaused -= PauseControls;
+        PauseMenu.OnUnpaused -= UnpauseControls;
+    }
+
+    private void UnpauseControls()
+    {
+        isPaused = false;
+    }
+
+    private void PauseControls()
+    {
+        isPaused = true;
     }
 }

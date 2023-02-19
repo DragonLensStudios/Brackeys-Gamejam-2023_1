@@ -257,4 +257,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3278d8eb7f945c4e941662ef99aaad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 2015790220}
+  sfx: Checkpoint

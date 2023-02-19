@@ -56,6 +56,9 @@ public class Page : MonoBehaviour
 
         switch(EntryMode)
         {
+            case EntryMode.DO_NOTHING:
+                PlayEntryClip(PlayAudio);
+                break;
             case EntryMode.SLIDE:
                 SlideIn(PlayAudio);
                 break;
@@ -74,6 +77,9 @@ public class Page : MonoBehaviour
 
         switch (ExitMode)
         {
+            case EntryMode.DO_NOTHING:
+                PlayExitClip(PlayAudio);
+                break;
             case EntryMode.SLIDE:
                 SlideOut(PlayAudio);
                 break;

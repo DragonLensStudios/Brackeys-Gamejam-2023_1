@@ -66,7 +66,7 @@ public class AudioManager : MonoBehaviour
             soundEffects[i].audioSource = audioObject.GetComponent<AudioSource>();
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
     }
 
